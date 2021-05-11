@@ -16,28 +16,29 @@ var motion = Vector2()
 func _physics_process(_delta):
 	motion.y += gravity
 	var friction = false
-	sprite.visible = true
-	sprite2.visible = false
 	
 	if on_ladder == true:
-		friction = true
+		
 		if Input.is_action_pressed("ui_up"):
-			gravity = 0
 			sprite.visible = false
 			sprite2.visible = true
 			get_node("AnimationPlayer").play("Sb_Esc")
+			gravity = 0
+			motion.y = min(motion.y + ACELERATION, -MAX_SPEED)
 			
-			motion.y = - ACELERATION
 		elif Input.is_action_pressed("ui_down"):
+			gravity = 0
 			sprite.visible = false
 			sprite2.visible = true
-			gravity = 0
 			get_node("AnimationPlayer").play("Sb_Esc")
-			motion.y = ACELERATION
+			motion.y = min(motion.y + ACELERATION, MAX_SPEED)
 		else:
 			motion.y = 0
+		
 	else:
-		gravity +=  20
+		sprite.visible = true
+		sprite2.visible = false
+		gravity =  20
 	
 	
 	if Input.is_action_pressed("ui_right"):
@@ -65,6 +66,4 @@ func _physics_process(_delta):
 			motion.x = lerp(motion.x, 0, 0.01)
 	
 	motion = move_and_slide(motion, up_direction)
-	#print(motion.x)
-	#print("\n", motion.y)
-		
+
