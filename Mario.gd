@@ -51,6 +51,7 @@ func _physics_process(_delta):
 		motion.x = min(motion.x + ACELERATION, -MAX_SPEED)
 	else:
 		get_node("AnimationPlayer").play("Idle")
+		motion.x = 0
 		friction = true
 	
 	
