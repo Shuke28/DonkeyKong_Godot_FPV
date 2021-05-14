@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Mario.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/piso.png" type="Texture" id=2]
 [ext_resource path="res://assets/h2x1_nswitchds_arcadearchivesd.png" type="Texture" id=3]
 [ext_resource path="res://Escalera.gd" type="Script" id=4]
+[ext_resource path="res://DonkeyKong.tscn" type="PackedScene" id=5]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 15.815, 8.37287, 0.000419617, 8.37287, 0.000419617, 0.000419617, 15.815, 0.000419617 )
@@ -93,7 +94,7 @@ points = PoolVector2Array( 16, 8, 0.232994, 8, 0, 0, 16, 0 )
 4/z_index = 0
 
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 6.285, 41.011 )
+extents = Vector2( 6.285, 36.8404 )
 
 [node name="Node2D" type="Node2D"]
 
@@ -121,7 +122,9 @@ position = Vector2( 122.742, 75.597 )
 script = ExtResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="esc"]
-position = Vector2( 427.011, 249.222 )
+position = Vector2( 426.381, 242.922 )
 shape = SubResource( 4 )
+
+[node name="DonkeyKong" parent="." instance=ExtResource( 5 )]
 [connection signal="body_entered" from="esc" to="esc" method="_on_esc_body_entered"]
 [connection signal="body_exited" from="esc" to="esc" method="_on_esc_body_exited"]
