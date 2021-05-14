@@ -1,69 +1,49 @@
 extends KinematicBody2D
 
-const ACELERATION = 50
-const MAX_SPEED = 100
-const JUMP_H = -100
-const up_direction = Vector2(0, -1)
-var gravity = 20
-
-onready var sprite = $M_walk
-onready var sprite2 = $M_up
+var vel_act = Vector2()
+var GRAVEDAD = 9.8
+export (float) var vel_mov
 var on_ladder = false
-#onready var animationPlayer = $AnimationPlayer
 
-var motion = Vector2()
+func _ready():
+	pass
 
-func _physics_process(_delta):
-	motion.y += gravity
-	var friction = false
+func _physics_process(delta):
+	vel_act.y += GRAVEDAD * delta
 	
 	if on_ladder == true:
+		if Input.is_action_pressed("tecla_arriba"):
+			vel_act.y = -vel_mov
+			GRAVEDAD = 0
+			$AnimationPlayer.play("trepar")
 		
-		if Input.is_action_pressed("ui_up"):
-			sprite.visible = false
-			sprite2.visible = true
-			get_node("AnimationPlayer").play("Sb_Esc")
-			gravity = 0
-			motion.y = min(motion.y + ACELERATION, -MAX_SPEED)
-			
-		elif Input.is_action_pressed("ui_down"):
-			gravity = 0
-			sprite.visible = false
-			sprite2.visible = true
-			get_node("AnimationPlayer").play("Sb_Esc")
-			motion.y = min(motion.y + ACELERATION, MAX_SPEED)
+		elif Input.is_action_pressed("tecla_abajo"):
+			vel_act.y = vel_mov
+			GRAVEDAD = 0
+			$AnimationPlayer.play("trepar")
 		else:
-			motion.y = 0
-		
-	else:
-		sprite.visible = true
-		sprite2.visible = false
-		gravity =  20
+			vel_act.x = 0
 	
+	if Input.is_action_pressed("tecla_izquierda"):
+		vel_act.x = -vel_mov
+		$Sprite.flip_h = false
+		$AnimationPlayer.play("caminar")
+	elif Input.is_action_pressed("tecla_derecha"):
+		vel_act.x = vel_mov
+		$Sprite.flip_h = true
+		$AnimationPlayer.play("caminar")
+	else: 
+		vel_act.x = 0
+		$AnimationPlayer.play("idle")
 	
-	if Input.is_action_pressed("ui_right"):
-		sprite.flip_h = false
-		get_node("AnimationPlayer").play("Walk")
-		motion.x = min(motion.x + ACELERATION, MAX_SPEED)
-		
-	elif Input.is_action_pressed("ui_left"):
-		sprite.flip_h = true
-		get_node("AnimationPlayer").play("Walk")
-		motion.x = min(motion.x + ACELERATION, -MAX_SPEED)
-	else:
-		get_node("AnimationPlayer").play("Idle")
-		motion.x = 0
-		friction = true
+	check_raycast()
 	
-	
-	if is_on_floor():
-		if Input.is_action_just_pressed("ui_accept"):
-			motion.y = JUMP_H
-		if friction == true:
-			motion.x = lerp(motion.x, 0, 0.5)		
-	else:
-		if friction == true:
-			motion.x = lerp(motion.x, 0, 0.01)
-	
-	motion = move_and_slide(motion, up_direction)
+	move_and_collide(vel_act * delta)
 
+func check_raycast():
+	if($ray.is_colliding()):
+		var objeto_colisionado = $ray.get_collider()
+		if(objeto_colisionado.is_in_group("suelo")):
+			vel_act.y = 0
+			global_position.y = ($ray.get_collision_point().y - $CollisionShape2D.shape.extents.y - 10)
+			
