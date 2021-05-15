@@ -1,0 +1,112 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://assets/DonkeyKongSheet1.png" type="Texture" id=1]
+[ext_resource path="res://DonkeyKong.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 33.0922, 30.8445 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "aventarAbajo"
+length = 1.2
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 2,
+"values": [ Rect2( 6, 151, 47, 34 ), Rect2( 157, 151, 43, 34 ), Rect2( 107, 152, 44, 33 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "golpe"
+length = 0.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 2,
+"values": [ Rect2( 57, 150, 49, 35 ), Rect2( 201, 150, 49, 35 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "idleK"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Rect2( 106, 150, 44, 35 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "morirse"
+length = 1.2
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 2,
+"values": [ Rect2( 157, 187, 42, 32 ), Rect2( 201, 188, 48, 32 ), Rect2( 253, 187.988, 49, 32 ) ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "recogerAventar"
+length = 1.2
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 2,
+"values": [ Rect2( 5, 150, 49, 35 ), Rect2( 153, 150, 49, 35 ), Rect2( 252, 150, 49, 35 ) ]
+}
+
+[node name="DonkeyKong" type="KinematicBody2D"]
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 110.079, 82.0699 )
+scale = Vector2( 1.6, 1.9 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 107, 152, 44, 33 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 110.026, 83.7445 )
+shape = SubResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/aventarAbajo = SubResource( 2 )
+anims/golpe = SubResource( 3 )
+anims/idleK = SubResource( 4 )
+anims/morirse = SubResource( 5 )
+anims/recogerAventar = SubResource( 6 )

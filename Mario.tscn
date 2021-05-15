@@ -80,8 +80,8 @@ script = ExtResource( 4 )
 
 [node name="M_walk" type="Sprite" parent="."]
 visible = false
-position = Vector2( 0.021122, -1.57232 )
-scale = Vector2( 1.28842, 1.4773 )
+position = Vector2( -1.70917, -0.876842 )
+scale = Vector2( 1.10065, 1.15027 )
 texture = ExtResource( 3 )
 centered = false
 offset = Vector2( -9.21497, -8.78246 )
@@ -90,15 +90,15 @@ frame = 2
 
 [node name="M_up" type="Sprite" parent="."]
 visible = false
-position = Vector2( 1.75447, 3.41467 )
-scale = Vector2( 1.41543, 1.41248 )
+position = Vector2( 0.565277, 0.441643 )
+scale = Vector2( 1.11813, 1.01608 )
 texture = ExtResource( 2 )
 hframes = 3
 
 [node name="M_up2" type="Sprite" parent="."]
 visible = false
-position = Vector2( -0.578869, 0.13139 )
-scale = Vector2( 1.4773, 1.48123 )
+position = Vector2( -0.578869, -0.463213 )
+scale = Vector2( 1.00162, 1.08483 )
 texture = ExtResource( 1 )
 hframes = 4
 
@@ -110,5 +110,5 @@ anims/Walk = SubResource( 3 )
 anims/up = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -2.67029e-05, 0.0432949 )
+position = Vector2( 0.594582, 0.0432949 )
 shape = SubResource( 5 )
