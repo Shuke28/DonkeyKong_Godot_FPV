@@ -72,7 +72,7 @@ tracks/0/keys = {
 }
 
 [sub_resource type="RectangleShape2D" id=5]
-extents = Vector2( 5.76722, 8.49832 )
+extents = Vector2( 7.55098, 12.0331 )
 
 [node name="Mario" type="KinematicBody2D"]
 position = Vector2( 18.3848, 19.4454 )
