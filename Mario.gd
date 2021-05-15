@@ -43,11 +43,13 @@ func _physics_process(_delta):
 	
 	if Input.is_action_pressed("ui_right"):
 		sprite.flip_h = false
+		VariablesGlobales.p.x = 5
 		get_node("AnimationPlayer").play("Walk")
 		motion.x = min(motion.x + ACELERATION, MAX_SPEED)
 		
 	elif Input.is_action_pressed("ui_left"):
 		sprite.flip_h = true
+		VariablesGlobales.p.x = -5
 		get_node("AnimationPlayer").play("Walk")
 		motion.x = min(motion.x + ACELERATION, -MAX_SPEED)
 	else:
@@ -55,6 +57,10 @@ func _physics_process(_delta):
 		motion.x = 0
 		friction = true
 	
+	if Input.is_action_pressed("d"):
+		if VariablesGlobales.b == 0:
+			shoot()
+			
 	
 	if is_on_floor():
 		if Input.is_action_just_pressed("ui_accept"):
@@ -66,4 +72,11 @@ func _physics_process(_delta):
 			motion.x = lerp(motion.x, 0, 0.01)
 	
 	motion = move_and_slide(motion, up_direction)
+	
+func shoot():
+	VariablesGlobales.b = 1
+	var proyectil = load("res://Martillo.tscn")
+	var bullet = proyectil.instance()
+	bullet.position = get_global_position() + VariablesGlobales.p
+	get_parent().add_child(bullet)
 
