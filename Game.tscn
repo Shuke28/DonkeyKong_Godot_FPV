@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Mario.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/piso.png" type="Texture" id=2]
@@ -12,10 +12,10 @@ points = PoolVector2Array( 16, 9, 0, 9, 0, 1, 16, 1 )
 [sub_resource type="ConvexPolygonShape2D" id=2]
 points = PoolVector2Array( 16, 8, 0.232994, 8, 0, 0, 16, 0 )
 
-[sub_resource type="ConvexPolygonShape2D" id=5]
+[sub_resource type="ConvexPolygonShape2D" id=3]
 points = PoolVector2Array( 0, 0, 0, 0, 8, 0, 8, 8, 0, 8 )
 
-[sub_resource type="TileSet" id=3]
+[sub_resource type="TileSet" id=4]
 1/name = "piso.png 1"
 1/texture = ExtResource( 2 )
 1/tex_offset = Vector2( 0, 0 )
@@ -119,14 +119,14 @@ points = PoolVector2Array( 0, 0, 0, 0, 8, 0, 8, 8, 0, 8 )
 6/navigation_offset = Vector2( 0, 0 )
 6/shape_offset = Vector2( 0, 0 )
 6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-6/shape = SubResource( 5 )
+6/shape = SubResource( 3 )
 6/shape_one_way = false
 6/shape_one_way_margin = 1.0
 6/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 5 ),
+"shape": SubResource( 3 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 6/z_index = 0
@@ -168,7 +168,7 @@ points = PoolVector2Array( 0, 0, 0, 0, 8, 0, 8, 8, 0, 8 )
 8/shapes = [  ]
 8/z_index = 0
 
-[sub_resource type="RectangleShape2D" id=4]
+[sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 5.98315, 37.5521 )
 
 [sub_resource type="RectangleShape2D" id=6]
@@ -180,6 +180,36 @@ extents = Vector2( 6.07261, 35.6539 )
 [sub_resource type="RectangleShape2D" id=8]
 extents = Vector2( 5.49997, 50 )
 
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 5.96497, 7.87479 )
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 5.03955, 30.9027 )
+
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 4.40692, 8.61905 )
+
+[sub_resource type="RectangleShape2D" id=12]
+extents = Vector2( 5.6537, 40.7994 )
+
+[sub_resource type="RectangleShape2D" id=13]
+extents = Vector2( 6.52112, 49.8235 )
+
+[sub_resource type="RectangleShape2D" id=14]
+extents = Vector2( 6.29054, 7.44554 )
+
+[sub_resource type="RectangleShape2D" id=15]
+extents = Vector2( 5.37927, 36.7098 )
+
+[sub_resource type="RectangleShape2D" id=16]
+extents = Vector2( 5.68655, 50.2974 )
+
+[sub_resource type="RectangleShape2D" id=17]
+extents = Vector2( 4.71439, 79.7775 )
+
+[sub_resource type="RectangleShape2D" id=18]
+extents = Vector2( 4.52956, 80.2151 )
+
 [node name="Node2D" type="Node2D"]
 
 [node name="Nivel" type="Node2D" parent="."]
@@ -189,96 +219,187 @@ visible = false
 position = Vector2( 299.44, 350.955 )
 texture = ExtResource( 5 )
 
-[node name="TileMap" type="TileMap" parent="Nivel"]
-scale = Vector2( 2, 2 )
-mode = 2
-tile_set = SubResource( 3 )
-cell_custom_transform = Transform2D( 16, 0, 0, 16, 0, 0 )
-format = 1
-tile_data = PoolIntArray( 131078, 3, 0, 131079, 3, 0, 131080, 3, 0, 131081, 3, 0, 131082, 3, 0, 196610, 2, 0, 262147, 2, 0, 393215, 3, 0, 327680, 3, 0, 327681, 3, 0, 327682, 3, 0, 327683, 3, 0, 327684, 3, 0, 327685, 3, 0, 327686, 3, 0, 327687, 3, 0, 327688, 3, 0, 327689, 3, 0, 327690, 3, 0, 327691, 3, 0, 786434, 2, 0, 786435, 2, 0, 786436, 2, 0, 786437, 2, 0, 786439, 2, 0, 786441, 3, 0, 786442, 3, 0, 786443, 3, 0, 786444, 3, 0, 786445, 3, 0, 786446, 3, 0, 786447, 3, 0, 786448, 3, 0, 917506, 2, 0, 917507, 2, 0, 917508, 2, 0, 917509, 2, 0, 917510, 2, 0, 917511, 2, 0, 983041, 2, 0, 983042, 2, 0, 983043, 2, 0, 983044, 2, 0, 983045, 2, 0, 983046, 2, 0, 1048583, 2, 0, 1179659, 3, 0, 1179660, 3, 0, 1179661, 3, 0, 1179662, 3, 0, 1179663, 3, 0, 1179664, 8, 0, 1179665, 3, 0, 1376256, 3, 0, 1376257, 3, 0, 1376258, 3, 0, 1376259, 3, 0, 1376260, 3, 0, 1376261, 3, 0, 1376262, 3, 0, 1376263, 3, 0, 1376264, 3, 0, 1376265, 3, 0, 1376266, 3, 0, 1376267, 3, 0, 1441797, 2, 0, 1507332, 2, 0, 1572865, 2, 0, 1572866, 2, 0, 1572867, 2, 0 )
+[node name="Escaleras" type="Node2D" parent="Nivel"]
 
-[node name="TileMap1" type="TileMap" parent="Nivel"]
-position = Vector2( -13, -2 )
-rotation = 0.0872665
-scale = Vector2( 2, 2 )
-mode = 2
-tile_set = SubResource( 3 )
-cell_custom_transform = Transform2D( 16, 0, 0, 16, 0, 0 )
-format = 1
-tile_data = PoolIntArray( 196610, 2, 0, 262147, 2, 0, 786444, 2, 0, 786445, 2, 0, 786446, 2, 0, 786447, 2, 0, 786448, 2, 0, 851977, 2, 0, 917508, 2, 0, 917509, 2, 0, 917510, 2, 0, 917511, 2, 0, 983041, 2, 0, 1114113, 3, 0, 1114114, 3, 0, 1114115, 3, 0, 1114116, 3, 0, 1114117, 3, 0, 1114118, 3, 0, 1114119, 3, 0, 1114120, 3, 0, 1114121, 3, 0, 1114122, 3, 0, 1114123, 3, 0, 1114124, 3, 0, 1179652, 2, 0, 1179653, 2, 0, 1179655, 2, 0, 1245188, 2, 0, 1245189, 2, 0, 1245191, 2, 0, 1310725, 2, 0, 1310726, 2, 0, 1376261, 2, 0, 1572865, 2, 0, 1572866, 2, 0, 1572867, 2, 0 )
-
-[node name="TileMap5" type="TileMap" parent="Nivel"]
-position = Vector2( -30, 2.9 )
-rotation = 0.0872665
-scale = Vector2( 2, 2 )
-mode = 2
-tile_set = SubResource( 3 )
-cell_custom_transform = Transform2D( 16, 0, 0, 16, 0, 0 )
-format = 1
-tile_data = PoolIntArray( 196610, 2, 0, 262147, 2, 0, 720896, 3, 0, 720897, 3, 0, 720898, 3, 0, 720899, 3, 0, 720900, 3, 0, 720901, 3, 0, 720902, 3, 0, 720903, 3, 0, 720904, 3, 0, 720905, 3, 0, 720906, 3, 0, 786444, 2, 0, 786445, 2, 0, 786446, 2, 0, 786447, 2, 0, 786448, 2, 0, 851977, 2, 0, 917508, 2, 0, 917509, 2, 0, 917510, 2, 0, 917511, 2, 0, 983041, 2, 0, 1179652, 2, 0, 1179653, 2, 0, 1179655, 2, 0, 1245188, 2, 0, 1245189, 2, 0, 1245191, 2, 0, 1310725, 2, 0, 1310726, 2, 0, 1376261, 2, 0, 1572865, 2, 0, 1572866, 2, 0, 1572867, 2, 0 )
-
-[node name="TileMap6" type="TileMap" parent="Nivel"]
-position = Vector2( -21.5, -2.7 )
-rotation = 0.0872665
-scale = Vector2( 2, 2 )
-mode = 2
-tile_set = SubResource( 3 )
-cell_custom_transform = Transform2D( 16, 0, 0, 16, 0, 0 )
-format = 1
-tile_data = PoolIntArray( 196610, 2, 0, 262147, 2, 0, 262157, 3, 0, 262158, 3, 0, 262159, 3, 0, 262160, 3, 0, 262161, 3, 0, 262162, 3, 0, 786444, 2, 0, 786445, 2, 0, 786446, 2, 0, 786447, 2, 0, 786448, 2, 0, 851977, 2, 0, 917508, 2, 0, 917509, 2, 0, 917510, 2, 0, 917511, 2, 0, 983041, 2, 0, 1179652, 2, 0, 1179653, 2, 0, 1179655, 2, 0, 1245188, 2, 0, 1245189, 2, 0, 1245191, 2, 0, 1310725, 2, 0, 1310726, 2, 0, 1376261, 2, 0, 1572865, 2, 0, 1572866, 2, 0, 1572867, 2, 0 )
-
-[node name="TileMap2" type="TileMap" parent="Nivel"]
-position = Vector2( -12, 6.5 )
-rotation = -0.10472
-scale = Vector2( 2, 2 )
-mode = 2
-tile_set = SubResource( 3 )
-cell_custom_transform = Transform2D( 16, 0, 0, 16, 0, 0 )
-format = 1
-tile_data = PoolIntArray( 196610, 2, 0, 262147, 2, 0, 786435, 2, 0, 786436, 2, 0, 786437, 2, 0, 786439, 2, 0, 786441, 2, 0, 786442, 2, 0, 786443, 2, 0, 786444, 2, 0, 786445, 2, 0, 786446, 2, 0, 786447, 2, 0, 786448, 2, 0, 851977, 2, 0, 1179652, 2, 0, 1179653, 2, 0, 1179655, 2, 0, 1245188, 2, 0, 1245189, 2, 0, 1245191, 2, 0, 1310725, 2, 0, 1310726, 2, 0, 1441802, 3, 0, 1441803, 3, 0, 1441804, 3, 0, 1441805, 3, 0, 1441806, 3, 0, 1441807, 3, 0, 1441808, 3, 0, 1441809, 3, 0, 1572865, 2, 0, 1572866, 2, 0, 1572867, 2, 0 )
-
-[node name="TileMap3" type="TileMap" parent="Nivel"]
-position = Vector2( 0, 8 )
-rotation = -0.0872665
-scale = Vector2( 2, 2 )
-mode = 2
-tile_set = SubResource( 3 )
-cell_custom_transform = Transform2D( 16, 0, 0, 16, 0, 0 )
-format = 1
-tile_data = PoolIntArray( 196610, 2, 0, 262147, 2, 0, 786435, 2, 0, 786436, 2, 0, 786437, 2, 0, 786439, 2, 0, 786441, 2, 0, 786442, 2, 0, 786443, 2, 0, 786444, 2, 0, 786445, 2, 0, 786446, 2, 0, 786447, 2, 0, 786448, 2, 0, 851977, 2, 0, 983040, 8, 0, 983041, 3, 0, 983042, 3, 0, 983043, 3, 0, 983044, 3, 0, 983045, 3, 0, 983046, 8, 0, 983047, 3, 0, 983048, 3, 0, 983049, 3, 0, 983050, 3, 0, 983051, 3, 0, 983052, 3, 0, 983053, 3, 0, 983054, 3, 0, 983055, 3, 0, 983056, 3, 0, 983057, 3, 0, 983058, 3, 0, 1179652, 2, 0, 1179653, 2, 0, 1179655, 2, 0, 1245188, 2, 0, 1245189, 2, 0, 1245191, 2, 0, 1310725, 2, 0, 1310726, 2, 0, 1572865, 2, 0, 1572866, 2, 0, 1572867, 2, 0 )
-
-[node name="TileMap4" type="TileMap" parent="Nivel"]
-rotation = -0.0872665
-scale = Vector2( 2, 2 )
-mode = 2
-tile_set = SubResource( 3 )
-cell_custom_transform = Transform2D( 16, 0, 0, 16, 0, 0 )
-format = 1
-tile_data = PoolIntArray( 196610, 2, 0, 262147, 2, 0, 589825, 3, 0, 589826, 3, 0, 589827, 3, 0, 589828, 3, 0, 589829, 3, 0, 589830, 3, 0, 589831, 3, 0, 589832, 3, 0, 589833, 3, 0, 589834, 3, 0, 589835, 3, 0, 589836, 3, 0, 589837, 3, 0, 589838, 3, 0, 589839, 3, 0, 589840, 3, 0, 589841, 3, 0, 589842, 3, 0, 786435, 2, 0, 786436, 2, 0, 786437, 2, 0, 786439, 2, 0, 786441, 2, 0, 786442, 2, 0, 786443, 2, 0, 786444, 2, 0, 786445, 2, 0, 786446, 2, 0, 786447, 2, 0, 786448, 2, 0, 851977, 2, 0, 1179652, 2, 0, 1179653, 2, 0, 1179655, 2, 0, 1245188, 2, 0, 1245189, 2, 0, 1245191, 2, 0, 1310725, 2, 0, 1310726, 2, 0, 1572865, 2, 0, 1572866, 2, 0, 1572867, 2, 0 )
-
-[node name="escaleras" type="TileMap" parent="Nivel"]
+[node name="escaleras" type="TileMap" parent="Nivel/Escaleras"]
 position = Vector2( -5, 0 )
 mode = 2
-tile_set = SubResource( 3 )
+tile_set = SubResource( 4 )
 cell_custom_transform = Transform2D( 16, 0, 0, 16, 0, 0 )
 format = 1
 tile_data = PoolIntArray( 196610, 2, 0, 262147, 2, 0, 786435, 2, 0, 786436, 2, 0, 786437, 2, 0, 786439, 2, 0, 786441, 2, 0, 786442, 2, 0, 786443, 2, 0, 786444, 2, 0, 786445, 2, 0, 786446, 2, 0, 786447, 2, 0, 786448, 2, 0, 851977, 2, 0, 1179652, 2, 0, 1179653, 2, 0, 1179655, 2, 0, 1245188, 2, 0, 1245189, 2, 0, 1245191, 2, 0, 1310725, 2, 0, 1310726, 2, 0, 1572865, 2, 0, 1572866, 2, 0, 1572867, 2, 0, 2359309, 4, 0, 2424845, 4, 0, 2424865, 4, 0, 2490401, 4, 0, 2555937, 4, 0, 2621453, 4, 0, 2621473, 4, 0, 2686989, 4, 0 )
 
-[node name="escaleras2" type="TileMap" parent="Nivel"]
+[node name="escaleras2" type="TileMap" parent="Nivel/Escaleras"]
 position = Vector2( -10, 5.3 )
 mode = 2
-tile_set = SubResource( 3 )
+tile_set = SubResource( 4 )
 cell_custom_transform = Transform2D( 16, 0, 0, 16, 0, 0 )
 format = 1
 tile_data = PoolIntArray( 196610, 2, 0, 262147, 2, 0, 786435, 2, 0, 786436, 2, 0, 786437, 2, 0, 786439, 2, 0, 786441, 2, 0, 786442, 2, 0, 786443, 2, 0, 786444, 2, 0, 786445, 2, 0, 786446, 2, 0, 786447, 2, 0, 786448, 2, 0, 851977, 2, 0, 1179652, 2, 0, 1179653, 2, 0, 1179655, 2, 0, 1245188, 2, 0, 1245189, 2, 0, 1245191, 2, 0, 1310725, 2, 0, 1310726, 2, 0, 1572865, 2, 0, 1572866, 2, 0, 1572867, 2, 0, 2031620, 4, 0, 2097156, 4, 0, 2162692, 4, 0 )
 
-[node name="escaleras3" type="TileMap" parent="Nivel"]
+[node name="escaleras3" type="TileMap" parent="Nivel/Escaleras"]
 position = Vector2( -14, 5 )
 mode = 2
-tile_set = SubResource( 3 )
+tile_set = SubResource( 4 )
 cell_custom_transform = Transform2D( 16, 0, 0, 16, 0, 0 )
 format = 1
 tile_data = PoolIntArray( 196610, 2, 0, 262147, 2, 0, 786435, 2, 0, 786436, 2, 0, 786437, 2, 0, 786439, 2, 0, 786441, 2, 0, 786442, 2, 0, 786443, 2, 0, 786444, 2, 0, 786445, 2, 0, 786446, 2, 0, 786447, 2, 0, 786448, 2, 0, 851977, 2, 0, 1179652, 2, 0, 1179653, 2, 0, 1179655, 2, 0, 1245188, 2, 0, 1245189, 2, 0, 1245191, 2, 0, 1310725, 2, 0, 1310726, 2, 0, 1572865, 2, 0, 1572866, 2, 0, 1572867, 2, 0, 1966096, 4, 0, 2031632, 4, 0, 2097168, 4, 0, 2162704, 4, 0, 2228240, 4, 0 )
+
+[node name="escaleras4" type="TileMap" parent="Nivel/Escaleras"]
+position = Vector2( -14, 12 )
+mode = 2
+tile_set = SubResource( 4 )
+cell_custom_transform = Transform2D( 16, 0, 0, 16, 0, 0 )
+format = 1
+tile_data = PoolIntArray( 196610, 2, 0, 262147, 2, 0, 786435, 2, 0, 786436, 2, 0, 786437, 2, 0, 786439, 2, 0, 786441, 2, 0, 786442, 2, 0, 786443, 2, 0, 786444, 2, 0, 786445, 2, 0, 786446, 2, 0, 786447, 2, 0, 786448, 2, 0, 851977, 2, 0, 1179652, 2, 0, 1179653, 2, 0, 1179655, 2, 0, 1245188, 2, 0, 1245189, 2, 0, 1245191, 2, 0, 1310725, 2, 0, 1310726, 2, 0, 1572865, 2, 0, 1572866, 2, 0, 1572867, 2, 0, 1835017, 4, 0 )
+
+[node name="escaleras5" type="TileMap" parent="Nivel/Escaleras"]
+position = Vector2( -14, 2.8 )
+mode = 2
+tile_set = SubResource( 4 )
+cell_custom_transform = Transform2D( 16, 0, 0, 16, 0, 0 )
+format = 1
+tile_data = PoolIntArray( 196610, 2, 0, 262147, 2, 0, 786435, 2, 0, 786436, 2, 0, 786437, 2, 0, 786439, 2, 0, 786441, 2, 0, 786442, 2, 0, 786443, 2, 0, 786444, 2, 0, 786445, 2, 0, 786446, 2, 0, 786447, 2, 0, 786448, 2, 0, 851977, 2, 0, 1179652, 2, 0, 1179653, 2, 0, 1179655, 2, 0, 1245188, 2, 0, 1245189, 2, 0, 1245191, 2, 0, 1310725, 2, 0, 1310726, 2, 0, 1572865, 2, 0, 1572866, 2, 0, 1572867, 2, 0, 1572873, 4, 0 )
+
+[node name="escaleras6" type="TileMap" parent="Nivel/Escaleras"]
+position = Vector2( -10, -1 )
+mode = 2
+tile_set = SubResource( 4 )
+cell_custom_transform = Transform2D( 16, 0, 0, 16, 0, 0 )
+format = 1
+tile_data = PoolIntArray( 196610, 2, 0, 262147, 2, 0, 786435, 2, 0, 786436, 2, 0, 786437, 2, 0, 786439, 2, 0, 786441, 2, 0, 786442, 2, 0, 786443, 2, 0, 786444, 2, 0, 786445, 2, 0, 786446, 2, 0, 786447, 2, 0, 786448, 2, 0, 851977, 2, 0, 1179652, 2, 0, 1179653, 2, 0, 1179655, 2, 0, 1245188, 2, 0, 1245189, 2, 0, 1245191, 2, 0, 1310725, 2, 0, 1310726, 2, 0, 1572865, 2, 0, 1572866, 2, 0, 1572867, 2, 0, 1638431, 4, 0, 1703967, 4, 0, 1769503, 4, 0 )
+
+[node name="escaleras7" type="TileMap" parent="Nivel/Escaleras"]
+position = Vector2( -10, -1 )
+mode = 2
+tile_set = SubResource( 4 )
+cell_custom_transform = Transform2D( 16, 0, 0, 16, 0, 0 )
+format = 1
+tile_data = PoolIntArray( 196610, 2, 0, 262147, 2, 0, 786435, 2, 0, 786436, 2, 0, 786437, 2, 0, 786439, 2, 0, 786441, 2, 0, 786442, 2, 0, 786443, 2, 0, 786444, 2, 0, 786445, 2, 0, 786446, 2, 0, 786447, 2, 0, 786448, 2, 0, 851977, 2, 0, 1179652, 2, 0, 1179653, 2, 0, 1179655, 2, 0, 1245188, 2, 0, 1245189, 2, 0, 1245191, 2, 0, 1310725, 2, 0, 1310726, 2, 0, 1507354, 4, 0, 1572865, 2, 0, 1572866, 2, 0, 1572867, 2, 0 )
+
+[node name="escaleras8" type="TileMap" parent="Nivel/Escaleras"]
+position = Vector2( -10, -4 )
+mode = 2
+tile_set = SubResource( 4 )
+cell_custom_transform = Transform2D( 16, 0, 0, 16, 0, 0 )
+format = 1
+tile_data = PoolIntArray( 196610, 2, 0, 262147, 2, 0, 786435, 2, 0, 786436, 2, 0, 786437, 2, 0, 786439, 2, 0, 786441, 2, 0, 786442, 2, 0, 786443, 2, 0, 786444, 2, 0, 786445, 2, 0, 786446, 2, 0, 786447, 2, 0, 786448, 2, 0, 851977, 2, 0, 1114138, 4, 0, 1179652, 2, 0, 1179653, 2, 0, 1179655, 2, 0, 1245188, 2, 0, 1245191, 2, 0, 1310726, 2, 0, 1572865, 2, 0, 1572866, 2, 0, 1572867, 2, 0 )
+
+[node name="escaleras9" type="TileMap" parent="Nivel/Escaleras"]
+position = Vector2( -15, -5 )
+mode = 2
+tile_set = SubResource( 4 )
+cell_custom_transform = Transform2D( 16, 0, 0, 16, 0, 0 )
+format = 1
+tile_data = PoolIntArray( 196610, 2, 0, 262147, 2, 0, 786435, 2, 0, 786436, 2, 0, 786437, 2, 0, 786439, 2, 0, 786441, 2, 0, 786442, 2, 0, 786443, 2, 0, 786444, 2, 0, 786445, 2, 0, 786446, 2, 0, 786447, 2, 0, 786448, 2, 0, 851977, 2, 0, 1179652, 2, 0, 1179653, 2, 0, 1179655, 2, 0, 1245188, 2, 0, 1245189, 4, 0, 1245191, 2, 0, 1310725, 4, 0, 1310726, 2, 0, 1376261, 4, 0, 1441797, 4, 0, 1572865, 2, 0, 1572866, 2, 0, 1572867, 2, 0 )
+
+[node name="escaleras10" type="TileMap" parent="Nivel/Escaleras"]
+position = Vector2( -19, -13 )
+mode = 2
+tile_set = SubResource( 4 )
+cell_custom_transform = Transform2D( 16, 0, 0, 16, 0, 0 )
+format = 1
+tile_data = PoolIntArray( 196610, 2, 0, 262147, 2, 0, 786435, 2, 0, 786436, 2, 0, 786437, 2, 0, 786439, 2, 0, 786441, 2, 0, 786442, 2, 0, 786443, 2, 0, 786444, 2, 0, 786445, 2, 0, 786446, 2, 0, 786447, 2, 0, 786448, 2, 0, 851977, 2, 0, 1179652, 2, 0, 1179653, 2, 0, 1179655, 2, 0, 1245188, 2, 0, 1245191, 2, 0, 1245195, 4, 0, 1310726, 2, 0, 1310731, 4, 0, 1376267, 4, 0, 1441803, 4, 0, 1507339, 4, 0, 1572865, 2, 0, 1572866, 2, 0, 1572867, 2, 0 )
+
+[node name="escaleras11" type="TileMap" parent="Nivel/Escaleras"]
+position = Vector2( 0, 10 )
+mode = 2
+tile_set = SubResource( 4 )
+cell_custom_transform = Transform2D( 16, 0, 0, 16, 0, 0 )
+format = 1
+tile_data = PoolIntArray( 196610, 2, 0, 262147, 2, 0, 786435, 2, 0, 786436, 2, 0, 786437, 2, 0, 786439, 2, 0, 786441, 2, 0, 786442, 2, 0, 786443, 2, 0, 786444, 2, 0, 786445, 2, 0, 786446, 2, 0, 786447, 2, 0, 786448, 2, 0, 851977, 2, 0, 983055, 4, 0, 1179652, 2, 0, 1179653, 2, 0, 1179655, 2, 0, 1245188, 2, 0, 1245191, 2, 0, 1310726, 2, 0, 1572865, 2, 0, 1572866, 2, 0, 1572867, 2, 0 )
+
+[node name="escaleras12" type="TileMap" parent="Nivel/Escaleras"]
+mode = 2
+tile_set = SubResource( 4 )
+cell_custom_transform = Transform2D( 16, 0, 0, 16, 0, 0 )
+format = 1
+tile_data = PoolIntArray( 196610, 2, 0, 262147, 2, 0, 720911, 4, 0, 786435, 2, 0, 786436, 2, 0, 786437, 2, 0, 786439, 2, 0, 786441, 2, 0, 786442, 2, 0, 786443, 2, 0, 786444, 2, 0, 786445, 2, 0, 786446, 2, 0, 786447, 2, 0, 851977, 2, 0, 1179652, 2, 0, 1179653, 2, 0, 1179655, 2, 0, 1245188, 2, 0, 1245191, 2, 0, 1310726, 2, 0, 1572865, 2, 0, 1572866, 2, 0, 1572867, 2, 0 )
+
+[node name="escaleras13" type="TileMap" parent="Nivel/Escaleras"]
+position = Vector2( 10, -1 )
+mode = 2
+tile_set = SubResource( 4 )
+cell_custom_transform = Transform2D( 16, 0, 0, 16, 0, 0 )
+format = 1
+tile_data = PoolIntArray( 196610, 2, 0, 262147, 2, 0, 786435, 2, 0, 786436, 2, 0, 786437, 2, 0, 786439, 2, 0, 786441, 2, 0, 786442, 2, 0, 786443, 2, 0, 786444, 2, 0, 786445, 2, 0, 786446, 2, 0, 786447, 2, 0, 786465, 4, 0, 851977, 2, 0, 852001, 4, 0, 917537, 4, 0, 1179652, 2, 0, 1179653, 2, 0, 1179655, 2, 0, 1245188, 2, 0, 1245191, 2, 0, 1310726, 2, 0, 1572865, 2, 0, 1572866, 2, 0, 1572867, 2, 0 )
+
+[node name="escaleras14" type="TileMap" parent="Nivel/Escaleras"]
+position = Vector2( -25, 0 )
+mode = 2
+tile_set = SubResource( 4 )
+cell_custom_transform = Transform2D( 16, 0, 0, 16, 0, 0 )
+format = 1
+tile_data = PoolIntArray( 10, 4, 0, 12, 4, 0, 65546, 4, 0, 65548, 4, 0, 131082, 4, 0, 131084, 4, 0, 196610, 2, 0, 196618, 4, 0, 196620, 4, 0, 262147, 2, 0, 262154, 4, 0, 262156, 4, 0, 327690, 4, 0, 327692, 4, 0, 327700, 4, 0, 393226, 4, 0, 393228, 4, 0, 393236, 4, 0, 458762, 4, 0, 458764, 4, 0, 458772, 4, 0, 524298, 4, 0, 524300, 4, 0, 524308, 4, 0, 589834, 4, 0, 589836, 4, 0, 589844, 4, 0, 786435, 2, 0, 786436, 2, 0, 786437, 2, 0, 786439, 2, 0, 786441, 2, 0, 786442, 2, 0, 786443, 2, 0, 786444, 2, 0, 786445, 2, 0, 786446, 2, 0, 786447, 2, 0, 851977, 2, 0, 1179652, 2, 0, 1179653, 2, 0, 1179655, 2, 0, 1245188, 2, 0, 1245191, 2, 0, 1310726, 2, 0, 1572865, 2, 0, 1572866, 2, 0, 1572867, 2, 0 )
+
+[node name="Pisos" type="Node2D" parent="Nivel"]
+
+[node name="TileMap" type="TileMap" parent="Nivel/Pisos"]
+scale = Vector2( 2, 2 )
+mode = 2
+tile_set = SubResource( 4 )
+cell_custom_transform = Transform2D( 16, 0, 0, 16, 0, 0 )
+format = 1
+tile_data = PoolIntArray( 131078, 3, 0, 131079, 3, 0, 131080, 3, 0, 131081, 8, 0, 131082, 3, 0, 196610, 2, 0, 262147, 2, 0, 393215, 3, 0, 327680, 3, 0, 327681, 3, 0, 327682, 3, 0, 327683, 3, 0, 327684, 3, 0, 327685, 3, 0, 327686, 3, 0, 327687, 3, 0, 327688, 3, 0, 327689, 3, 0, 327690, 3, 0, 327691, 3, 0, 786434, 2, 0, 786435, 2, 0, 786436, 2, 0, 786437, 2, 0, 786439, 2, 0, 786441, 3, 0, 786442, 3, 0, 786443, 3, 0, 786444, 3, 0, 786445, 3, 0, 786446, 3, 0, 786447, 8, 0, 786448, 3, 0, 917506, 2, 0, 917507, 2, 0, 917508, 2, 0, 917509, 2, 0, 917510, 2, 0, 917511, 2, 0, 983041, 2, 0, 983042, 2, 0, 983043, 2, 0, 983044, 2, 0, 983045, 2, 0, 983046, 2, 0, 1048583, 2, 0, 1179659, 3, 0, 1179660, 3, 0, 1179661, 3, 0, 1179662, 3, 0, 1179663, 3, 0, 1179664, 8, 0, 1179665, 3, 0, 1376256, 3, 0, 1376257, 3, 0, 1376258, 3, 0, 1376259, 3, 0, 1376260, 3, 0, 1376261, 3, 0, 1376262, 3, 0, 1376263, 3, 0, 1376264, 3, 0, 1376265, 3, 0, 1376266, 3, 0, 1376267, 3, 0, 1441797, 2, 0, 1507332, 2, 0, 1572865, 2, 0, 1572866, 2, 0, 1572867, 2, 0 )
+
+[node name="TileMap1" type="TileMap" parent="Nivel/Pisos"]
+position = Vector2( -13, -2 )
+rotation = 0.0872665
+scale = Vector2( 2, 2 )
+mode = 2
+tile_set = SubResource( 4 )
+cell_custom_transform = Transform2D( 16, 0, 0, 16, 0, 0 )
+format = 1
+tile_data = PoolIntArray( 196610, 2, 0, 262147, 2, 0, 786444, 2, 0, 786445, 2, 0, 786446, 2, 0, 786447, 2, 0, 786448, 2, 0, 851977, 2, 0, 917508, 2, 0, 917509, 2, 0, 917510, 2, 0, 917511, 2, 0, 983041, 2, 0, 1114113, 3, 0, 1114114, 3, 0, 1114115, 3, 0, 1114116, 3, 0, 1114117, 3, 0, 1114118, 3, 0, 1114119, 3, 0, 1114120, 3, 0, 1114121, 3, 0, 1114122, 3, 0, 1114123, 3, 0, 1114124, 3, 0, 1179652, 2, 0, 1179653, 2, 0, 1179655, 2, 0, 1245188, 2, 0, 1245189, 2, 0, 1245191, 2, 0, 1310725, 2, 0, 1310726, 2, 0, 1376261, 2, 0, 1572865, 2, 0, 1572866, 2, 0, 1572867, 2, 0 )
+
+[node name="TileMap5" type="TileMap" parent="Nivel/Pisos"]
+position = Vector2( -30, 2.9 )
+rotation = 0.0872665
+scale = Vector2( 2, 2 )
+mode = 2
+tile_set = SubResource( 4 )
+cell_custom_transform = Transform2D( 16, 0, 0, 16, 0, 0 )
+format = 1
+tile_data = PoolIntArray( 196610, 2, 0, 262147, 2, 0, 720896, 3, 0, 720897, 3, 0, 720898, 3, 0, 720899, 3, 0, 720900, 3, 0, 720901, 3, 0, 720902, 3, 0, 720903, 3, 0, 720904, 3, 0, 720905, 3, 0, 720906, 3, 0, 786444, 2, 0, 786445, 2, 0, 786446, 2, 0, 786447, 2, 0, 786448, 2, 0, 851977, 2, 0, 917508, 2, 0, 917509, 2, 0, 917510, 2, 0, 917511, 2, 0, 983041, 2, 0, 1179652, 2, 0, 1179653, 2, 0, 1179655, 2, 0, 1245188, 2, 0, 1245189, 2, 0, 1245191, 2, 0, 1310725, 2, 0, 1310726, 2, 0, 1376261, 2, 0, 1572865, 2, 0, 1572866, 2, 0, 1572867, 2, 0 )
+
+[node name="TileMap6" type="TileMap" parent="Nivel/Pisos"]
+position = Vector2( -20, -3.8 )
+rotation = 0.0872665
+scale = Vector2( 2, 2 )
+mode = 2
+tile_set = SubResource( 4 )
+cell_custom_transform = Transform2D( 16, 0, 0, 16, 0, 0 )
+format = 1
+tile_data = PoolIntArray( 196610, 2, 0, 262147, 2, 0, 262157, 3, 0, 262158, 3, 0, 262159, 3, 0, 262160, 3, 0, 262161, 8, 0, 262162, 3, 0, 786444, 2, 0, 786445, 2, 0, 786446, 2, 0, 786447, 2, 0, 786448, 2, 0, 851977, 2, 0, 917508, 2, 0, 917509, 2, 0, 917510, 2, 0, 917511, 2, 0, 983041, 2, 0, 1179652, 2, 0, 1179653, 2, 0, 1179655, 2, 0, 1245188, 2, 0, 1245189, 2, 0, 1245191, 2, 0, 1310725, 2, 0, 1310726, 2, 0, 1376261, 2, 0, 1572865, 2, 0, 1572866, 2, 0, 1572867, 2, 0 )
+
+[node name="TileMap2" type="TileMap" parent="Nivel/Pisos"]
+position = Vector2( -12, 6.5 )
+rotation = -0.10472
+scale = Vector2( 2, 2 )
+mode = 2
+tile_set = SubResource( 4 )
+cell_custom_transform = Transform2D( 16, 0, 0, 16, 0, 0 )
+format = 1
+tile_data = PoolIntArray( 196610, 2, 0, 262147, 2, 0, 786435, 2, 0, 786436, 2, 0, 786437, 2, 0, 786439, 2, 0, 786441, 2, 0, 786442, 2, 0, 786443, 2, 0, 786444, 2, 0, 786445, 2, 0, 786446, 2, 0, 786447, 2, 0, 786448, 2, 0, 851977, 2, 0, 1179652, 2, 0, 1179653, 2, 0, 1179655, 2, 0, 1245188, 2, 0, 1245189, 2, 0, 1245191, 2, 0, 1310725, 2, 0, 1310726, 2, 0, 1441802, 3, 0, 1441803, 3, 0, 1441804, 3, 0, 1441805, 3, 0, 1441806, 3, 0, 1441807, 3, 0, 1441808, 3, 0, 1441809, 3, 0, 1572865, 2, 0, 1572866, 2, 0, 1572867, 2, 0 )
+
+[node name="TileMap3" type="TileMap" parent="Nivel/Pisos"]
+position = Vector2( 0, 8 )
+rotation = -0.0872665
+scale = Vector2( 2, 2 )
+mode = 2
+tile_set = SubResource( 4 )
+cell_custom_transform = Transform2D( 16, 0, 0, 16, 0, 0 )
+format = 1
+tile_data = PoolIntArray( 196610, 2, 0, 262147, 2, 0, 786435, 2, 0, 786436, 2, 0, 786437, 2, 0, 786439, 2, 0, 786441, 2, 0, 786442, 2, 0, 786443, 2, 0, 786444, 2, 0, 786445, 2, 0, 786446, 2, 0, 786447, 2, 0, 786448, 2, 0, 851977, 2, 0, 983040, 8, 0, 983041, 3, 0, 983042, 3, 0, 983043, 3, 0, 983044, 3, 0, 983045, 3, 0, 983046, 8, 0, 983047, 3, 0, 983048, 3, 0, 983049, 3, 0, 983050, 3, 0, 983051, 3, 0, 983052, 3, 0, 983053, 3, 0, 983054, 3, 0, 983055, 3, 0, 983056, 3, 0, 983057, 3, 0, 983058, 3, 0, 1179652, 2, 0, 1179653, 2, 0, 1179655, 2, 0, 1245188, 2, 0, 1245189, 2, 0, 1245191, 2, 0, 1310725, 2, 0, 1310726, 2, 0, 1572865, 2, 0, 1572866, 2, 0, 1572867, 2, 0 )
+
+[node name="TileMap4" type="TileMap" parent="Nivel/Pisos"]
+rotation = -0.0872665
+scale = Vector2( 2, 2 )
+mode = 2
+tile_set = SubResource( 4 )
+cell_custom_transform = Transform2D( 16, 0, 0, 16, 0, 0 )
+format = 1
+tile_data = PoolIntArray( 196610, 2, 0, 262147, 2, 0, 589825, 8, 0, 589826, 3, 0, 589827, 3, 0, 589828, 8, 0, 589829, 3, 0, 589830, 3, 0, 589831, 3, 0, 589832, 3, 0, 589833, 3, 0, 589834, 3, 0, 589835, 3, 0, 589836, 3, 0, 589837, 3, 0, 589838, 3, 0, 589839, 3, 0, 589840, 3, 0, 589841, 3, 0, 589842, 3, 0, 786435, 2, 0, 786436, 2, 0, 786437, 2, 0, 786439, 2, 0, 786441, 2, 0, 786442, 2, 0, 786443, 2, 0, 786444, 2, 0, 786445, 2, 0, 786446, 2, 0, 786447, 2, 0, 786448, 2, 0, 851977, 2, 0, 1179652, 2, 0, 1179653, 2, 0, 1179655, 2, 0, 1245188, 2, 0, 1245189, 2, 0, 1245191, 2, 0, 1310725, 2, 0, 1310726, 2, 0, 1572865, 2, 0, 1572866, 2, 0, 1572867, 2, 0 )
 
 [node name="Mario" parent="." instance=ExtResource( 1 )]
 position = Vector2( 284.346, 541.997 )
@@ -288,7 +409,7 @@ script = ExtResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="esc"]
 position = Vector2( 531.159, 610.581 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="esc"]
 position = Vector2( 212.27, 655.689 )
@@ -301,5 +422,45 @@ shape = SubResource( 7 )
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="esc"]
 position = Vector2( 250, 509.5 )
 shape = SubResource( 8 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="esc"]
+position = Vector2( 138.194, 468.102 )
+shape = SubResource( 9 )
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="esc"]
+position = Vector2( 494.888, 410.445 )
+shape = SubResource( 10 )
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="esc"]
+position = Vector2( 414.362, 375.127 )
+shape = SubResource( 11 )
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="esc"]
+position = Vector2( 73.9989, 317.238 )
+shape = SubResource( 12 )
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="esc"]
+position = Vector2( 165.828, 315 )
+shape = SubResource( 13 )
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="esc"]
+position = Vector2( 248.813, 257.543 )
+shape = SubResource( 14 )
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="esc"]
+position = Vector2( 546.605, 200.778 )
+shape = SubResource( 15 )
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="esc"]
+position = Vector2( 303.672, 105.797 )
+shape = SubResource( 16 )
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="esc"]
+position = Vector2( 175.247, 78.9374 )
+shape = SubResource( 17 )
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="esc"]
+position = Vector2( 143.934, 80.005 )
+shape = SubResource( 18 )
 [connection signal="body_entered" from="esc" to="esc" method="_on_esc_body_entered"]
 [connection signal="body_exited" from="esc" to="esc" method="_on_esc_body_exited"]
