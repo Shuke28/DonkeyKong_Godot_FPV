@@ -10,13 +10,15 @@ var t = 0
 const up_direction = Vector2(0, -1)
 
 
-#	Función que nos da la posición instantánea de la bala
-func get_pos(delta):
-	t += delta
+func _ready():
 	if VariablesGlobales.p.x < 0:
 		ang = 120
 	else:
 		ang = 60
+
+#	Función que nos da la posición instantánea de la bala
+func get_pos(delta):
+	t += delta
 	pos = Vector2(velocidad * cos(ang * (PI /180)) * t, -(velocidad * sin(ang * (PI /180)) * t - 0.5 * g * t * t))
 
 
