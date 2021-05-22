@@ -20,16 +20,14 @@ config/description="Template from https://github.com/DeybisMelendez/godot-templa
 run/main_scene="res://Game.tscn"
 config/icon="res://icon.png"
 
-<<<<<<< HEAD
 [autoload]
 
 VariablesGlobales="*res://variables_globales.gd"
-=======
+
 [display]
 
 window/size/width=600
 window/size/height=700
->>>>>>> db94129845390d7908d296b3631e51490f72b915
 
 [input]
 
