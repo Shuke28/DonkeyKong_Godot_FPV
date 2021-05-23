@@ -17,7 +17,7 @@ _global_script_class_icons={
 
 config/name="Godot-template"
 config/description="Template from https://github.com/DeybisMelendez/godot-template"
-run/main_scene="res://Game.tscn"
+run/main_scene="res://Node.tscn"
 config/icon="res://icon.png"
 
 [autoload]
@@ -26,7 +26,7 @@ VariablesGlobales="*res://variables_globales.gd"
 
 [display]
 
-window/size/width=610
+window/size/width=600
 window/size/height=700
 
 [input]
