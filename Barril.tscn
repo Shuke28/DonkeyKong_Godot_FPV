@@ -1,24 +1,27 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://assets/DonkeyKongSheet1.png" type="Texture" id=1]
 [ext_resource path="res://Barril.gd" type="Script" id=2]
+[ext_resource path="res://Martillo.tscn" type="PackedScene" id=3]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 9.55232
 
-[node name="Node2D" type="Node2D"]
-script = ExtResource( 2 )
-
-[node name="RigidBody2D" type="RigidBody2D" parent="."]
+[node name="Barril" type="RigidBody2D"]
 mass = 5.0
+continuous_cd = 2
+contacts_reported = 4
+contact_monitor = true
 applied_force = Vector2( 200, 0 )
+script = ExtResource( 2 )
+Martillo = ExtResource( 3 )
 
-[node name="Sprite" type="Sprite" parent="RigidBody2D"]
+[node name="Sprite" type="Sprite" parent="."]
 position = Vector2( -0.148652, -0.148647 )
 scale = Vector2( 1.84617, 2.27029 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 65.1945, 257.447, 13.3469, 11.2935 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
