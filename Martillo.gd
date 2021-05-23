@@ -23,7 +23,7 @@ func get_pos(delta):
 
 
 #	Se manda llamar la posición de la bala en el momento
-func _physics_process(delta):
+func _physics_process(delta):	
 	get_pos(delta)
 	pos = move_and_slide(pos, up_direction)
 	$Sprite.rotate(sin(ang * (PI /180))*delta*2)

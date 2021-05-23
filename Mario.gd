@@ -5,6 +5,7 @@ const MAX_SPEED = 100
 const JUMP_H = -280
 const up_direction = Vector2(0, -1)
 var gravity = 20
+var t = 0
 
 #onready var sprite = $M_walk
 #nready var sprite2 = $M_up
