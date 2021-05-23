@@ -72,7 +72,7 @@ tracks/0/keys = {
 }
 
 [sub_resource type="RectangleShape2D" id=5]
-extents = Vector2( 7.26143, 8.70916 )
+extents = Vector2( 3.86935, 9.33511 )
 
 [node name="Mario" type="KinematicBody2D"]
 position = Vector2( 18.3848, 19.4454 )
@@ -80,7 +80,6 @@ scale = Vector2( 1.5, 1.5 )
 script = ExtResource( 4 )
 
 [node name="M_walk" type="Sprite" parent="."]
-visible = false
 position = Vector2( -1.70917, -0.876842 )
 scale = Vector2( 1.10065, 1.15027 )
 texture = ExtResource( 3 )

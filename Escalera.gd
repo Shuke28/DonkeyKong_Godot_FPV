@@ -1,7 +1,6 @@
 extends Area2D
 
-
-
+# ca
 func _ready():
 	pass # Replace with function body.
 

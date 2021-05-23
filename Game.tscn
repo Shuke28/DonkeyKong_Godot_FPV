@@ -1,10 +1,12 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://Mario.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/piso.png" type="Texture" id=2]
 [ext_resource path="res://assets/h2x1_nswitchds_arcadearchivesd.png" type="Texture" id=3]
 [ext_resource path="res://Escalera.gd" type="Script" id=4]
 [ext_resource path="res://assets/mundo1CDK.png" type="Texture" id=5]
+[ext_resource path="res://DonkeyKong.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Barril.tscn" type="PackedScene" id=7]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 16, 9, 0, 9, 0, 1, 16, 1 )
@@ -190,10 +192,10 @@ extents = Vector2( 5.03955, 30.9027 )
 extents = Vector2( 4.40692, 8.61905 )
 
 [sub_resource type="RectangleShape2D" id=12]
-extents = Vector2( 5.6537, 40.7994 )
+extents = Vector2( 9.56409, 46.4228 )
 
 [sub_resource type="RectangleShape2D" id=13]
-extents = Vector2( 6.52112, 49.8235 )
+extents = Vector2( 9.01053, 61.6463 )
 
 [sub_resource type="RectangleShape2D" id=14]
 extents = Vector2( 6.29054, 7.44554 )
@@ -348,6 +350,7 @@ rotation = 0.0872665
 scale = Vector2( 2, 2 )
 mode = 2
 tile_set = SubResource( 4 )
+cell_size = Vector2( 63, 64 )
 cell_custom_transform = Transform2D( 16, 0, 0, 16, 0, 0 )
 format = 1
 tile_data = PoolIntArray( 196610, 2, 0, 262147, 2, 0, 786444, 2, 0, 786445, 2, 0, 786446, 2, 0, 786447, 2, 0, 786448, 2, 0, 851977, 2, 0, 917508, 2, 0, 917509, 2, 0, 917510, 2, 0, 917511, 2, 0, 983041, 2, 0, 1114113, 3, 0, 1114114, 3, 0, 1114115, 3, 0, 1114116, 3, 0, 1114117, 3, 0, 1114118, 3, 0, 1114119, 3, 0, 1114120, 3, 0, 1114121, 3, 0, 1114122, 3, 0, 1114123, 3, 0, 1114124, 3, 0, 1179652, 2, 0, 1179653, 2, 0, 1179655, 2, 0, 1245188, 2, 0, 1245189, 2, 0, 1245191, 2, 0, 1310725, 2, 0, 1310726, 2, 0, 1376261, 2, 0, 1572865, 2, 0, 1572866, 2, 0, 1572867, 2, 0 )
@@ -436,11 +439,11 @@ position = Vector2( 414.362, 375.127 )
 shape = SubResource( 11 )
 
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="esc"]
-position = Vector2( 73.9989, 317.238 )
+position = Vector2( 73.9989, 327.556 )
 shape = SubResource( 12 )
 
 [node name="CollisionShape2D9" type="CollisionShape2D" parent="esc"]
-position = Vector2( 165.828, 315 )
+position = Vector2( 165.828, 334.049 )
 shape = SubResource( 13 )
 
 [node name="CollisionShape2D10" type="CollisionShape2D" parent="esc"]
@@ -448,7 +451,7 @@ position = Vector2( 248.813, 257.543 )
 shape = SubResource( 14 )
 
 [node name="CollisionShape2D11" type="CollisionShape2D" parent="esc"]
-position = Vector2( 546.605, 200.778 )
+position = Vector2( 546.01, 204.94 )
 shape = SubResource( 15 )
 
 [node name="CollisionShape2D12" type="CollisionShape2D" parent="esc"]
@@ -462,5 +465,11 @@ shape = SubResource( 17 )
 [node name="CollisionShape2D14" type="CollisionShape2D" parent="esc"]
 position = Vector2( 143.934, 80.005 )
 shape = SubResource( 18 )
+
+[node name="DonkeyKong" parent="." instance=ExtResource( 6 )]
+position = Vector2( -40.3175, 45.3572 )
+
+[node name="Node2D" parent="." instance=ExtResource( 7 )]
+position = Vector2( 338.116, 247.635 )
 [connection signal="body_entered" from="esc" to="esc" method="_on_esc_body_entered"]
 [connection signal="body_exited" from="esc" to="esc" method="_on_esc_body_exited"]

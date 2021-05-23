@@ -17,7 +17,7 @@ _global_script_class_icons={
 
 config/name="Godot-template"
 config/description="Template from https://github.com/DeybisMelendez/godot-template"
-run/main_scene="res://Game.tscn"
+run/main_scene="res://Escena_pruebas.tscn"
 config/icon="res://icon.png"
 
 [autoload]

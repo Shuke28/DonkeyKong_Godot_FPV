@@ -91,17 +91,18 @@ tracks/0/keys = {
 }
 
 [node name="DonkeyKong" type="KinematicBody2D"]
+position = Vector2( 0, -2.11893 )
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 110.079, 82.0699 )
+position = Vector2( 2.01382, -2.68715 )
 scale = Vector2( 1.6, 1.9 )
 texture = ExtResource( 1 )
 region_enabled = true
-region_rect = Rect2( 107, 152, 44, 33 )
+region_rect = Rect2( 252, 150, 49, 35 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 110.026, 83.7445 )
+position = Vector2( 1.96082, -1.01255 )
 shape = SubResource( 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
