@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://Mario.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/piso.png" type="Texture" id=2]
@@ -6,6 +6,8 @@
 [ext_resource path="res://Escalera.gd" type="Script" id=4]
 [ext_resource path="res://assets/mundo1CDK.png" type="Texture" id=5]
 [ext_resource path="res://DonkeyKong.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Barril.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Martillo.tscn" type="PackedScene" id=8]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 16, 9, 0, 9, 0, 1, 16, 1 )
@@ -169,10 +171,10 @@ points = PoolVector2Array( 0, 0, 0, 0, 8, 0, 8, 8, 0, 8 )
 8/shapes = [  ]
 8/z_index = 0
 
-[sub_resource type="ConvexPolygonShape2D" id=19]
+[sub_resource type="ConvexPolygonShape2D" id=5]
 points = PoolVector2Array( 16, 7, 0, 7, 0, 0, 16, 0 )
 
-[sub_resource type="TileSet" id=20]
+[sub_resource type="TileSet" id=6]
 0/name = "piso.png 0"
 0/texture = ExtResource( 2 )
 0/tex_offset = Vector2( 0, 0 )
@@ -183,58 +185,58 @@ points = PoolVector2Array( 16, 7, 0, 7, 0, 0, 16, 0 )
 0/navigation_offset = Vector2( 0, 0 )
 0/shape_offset = Vector2( 0, 0 )
 0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-0/shape = SubResource( 19 )
+0/shape = SubResource( 5 )
 0/shape_one_way = false
 0/shape_one_way_margin = 1.0
 0/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 19 ),
+"shape": SubResource( 5 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 0/z_index = 0
 
-[sub_resource type="RectangleShape2D" id=5]
+[sub_resource type="RectangleShape2D" id=7]
 extents = Vector2( 12.2302, 50.2846 )
 
-[sub_resource type="RectangleShape2D" id=6]
+[sub_resource type="RectangleShape2D" id=8]
 extents = Vector2( 12.0116, 47.473 )
 
-[sub_resource type="RectangleShape2D" id=7]
+[sub_resource type="RectangleShape2D" id=9]
 extents = Vector2( 12.3914, 51.1934 )
 
-[sub_resource type="RectangleShape2D" id=8]
+[sub_resource type="RectangleShape2D" id=10]
 extents = Vector2( 13.5131, 49.6633 )
 
-[sub_resource type="RectangleShape2D" id=9]
+[sub_resource type="RectangleShape2D" id=11]
 extents = Vector2( 12.3652, 49.9687 )
 
-[sub_resource type="RectangleShape2D" id=10]
+[sub_resource type="RectangleShape2D" id=12]
 extents = Vector2( 12.1028, 50.6855 )
 
-[sub_resource type="RectangleShape2D" id=11]
+[sub_resource type="RectangleShape2D" id=13]
 extents = Vector2( 11.447, 47.3083 )
 
-[sub_resource type="RectangleShape2D" id=12]
+[sub_resource type="RectangleShape2D" id=14]
 extents = Vector2( 13.7806, 50.2743 )
 
-[sub_resource type="RectangleShape2D" id=13]
+[sub_resource type="RectangleShape2D" id=15]
 extents = Vector2( 13.045, 49.5292 )
 
-[sub_resource type="RectangleShape2D" id=14]
+[sub_resource type="RectangleShape2D" id=16]
 extents = Vector2( 15.1699, 49.8585 )
 
-[sub_resource type="RectangleShape2D" id=15]
+[sub_resource type="RectangleShape2D" id=17]
 extents = Vector2( 12.0594, 50.906 )
 
-[sub_resource type="RectangleShape2D" id=16]
+[sub_resource type="RectangleShape2D" id=18]
 extents = Vector2( 13.8407, 60.9429 )
 
-[sub_resource type="RectangleShape2D" id=17]
+[sub_resource type="RectangleShape2D" id=19]
 extents = Vector2( 13.9194, 47.5677 )
 
-[sub_resource type="RectangleShape2D" id=18]
+[sub_resource type="RectangleShape2D" id=20]
 extents = Vector2( 12.6937, 47.3696 )
 
 [node name="Node2D" type="Node2D"]
@@ -264,10 +266,10 @@ mode = 2
 tile_set = SubResource( 4 )
 cell_custom_transform = Transform2D( 16, 0, 0, 16, 0, 0 )
 format = 1
-tile_data = PoolIntArray( 131078, 3, 0, 131079, 3, 0, 131080, 8, 0, 131081, 3, 0, 196610, 2, 0, 196611, 3, 0, 196612, 8, 0, 196613, 3, 0, 262147, 2, 0, 393216, 8, 0, 393217, 3, 0, 393218, 3, 0, 393219, 3, 0, 393220, 3, 0, 393221, 3, 0, 393222, 3, 0, 393223, 3, 0, 393224, 3, 0, 393225, 3, 0, 393226, 3, 0, 393227, 3, 0, 393228, 3, 0, 393229, 3, 0, 393230, 3, 0, 393231, 3, 0, 393232, 3, 0, 393233, 3, 0, 393234, 8, 0, 589824, 3, 0, 589825, 3, 0, 589827, 3, 0, 589828, 3, 0, 589829, 8, 0, 589830, 3, 0, 589832, 3, 0, 589833, 3, 0, 589834, 3, 0, 589836, 3, 0, 589837, 8, 0, 589838, 3, 0, 589839, 3, 0, 589841, 3, 0, 589842, 3, 0, 786432, 3, 0, 786433, 8, 0, 786434, 3, 0, 786435, 3, 0, 786436, 3, 0, 786437, 3, 0, 786438, 3, 0, 786439, 3, 0, 786440, 3, 0, 786441, 8, 0, 786442, 3, 0, 786443, 3, 0, 786444, 3, 0, 786445, 3, 0, 786446, 3, 0, 786447, 3, 0, 786448, 3, 0, 786449, 8, 0, 786450, 3, 0, 917506, 2, 0, 917507, 2, 0, 917508, 2, 0, 917509, 2, 0, 917510, 2, 0, 917511, 2, 0, 983040, 3, 0, 983041, 3, 0, 983042, 3, 0, 983044, 3, 0, 983045, 8, 0, 983046, 3, 0, 983047, 3, 0, 983048, 3, 0, 983049, 3, 0, 983050, 3, 0, 983051, 3, 0, 983052, 3, 0, 983053, 8, 0, 983054, 3, 0, 983056, 3, 0, 983057, 3, 0, 983058, 3, 0, 1048583, 2, 0, 1179648, 3, 0, 1179649, 8, 0, 1179650, 3, 0, 1179651, 3, 0, 1179652, 3, 0, 1179653, 3, 0, 1179654, 3, 0, 1179655, 3, 0, 1179656, 8, 0, 1179657, 3, 0, 1179658, 3, 0, 1179659, 8, 0, 1179660, 3, 0, 1179661, 3, 0, 1179662, 3, 0, 1179663, 3, 0, 1179664, 8, 0, 1179665, 8, 0, 1179666, 3, 0, 1376256, 3, 0, 1376257, 3, 0, 1376258, 3, 0, 1376259, 3, 0, 1376260, 3, 0, 1376261, 3, 0, 1376262, 3, 0, 1376263, 3, 0, 1376264, 3, 0, 1376265, 3, 0, 1376266, 3, 0, 1376267, 3, 0, 1376268, 3, 0, 1376269, 3, 0, 1376270, 3, 0, 1376271, 3, 0, 1376272, 3, 0, 1376273, 3, 0, 1376274, 3, 0, 1441797, 2, 0, 1507332, 2, 0, 1572865, 2, 0, 1572866, 2, 0, 1572867, 2, 0 )
+tile_data = PoolIntArray( 131078, 3, 0, 131079, 3, 0, 131080, 8, 0, 131081, 3, 0, 196610, 2, 0, 196611, 3, 0, 196612, 8, 0, 196613, 3, 0, 262147, 2, 0, 393216, 8, 0, 393217, 3, 0, 393218, 3, 0, 393219, 3, 0, 393220, 3, 0, 393221, 3, 0, 393222, 3, 0, 393223, 3, 0, 393224, 3, 0, 393225, 3, 0, 393226, 3, 0, 393227, 3, 0, 393228, 3, 0, 393229, 3, 0, 393230, 3, 0, 393231, 3, 0, 393232, 3, 0, 393233, 3, 0, 393234, 8, 0, 589824, 3, 0, 589825, 3, 0, 589827, 3, 0, 589828, 3, 0, 589829, 8, 0, 589830, 3, 0, 589832, 3, 0, 589833, 3, 0, 589834, 3, 0, 589836, 3, 0, 589837, 8, 0, 589838, 3, 0, 589839, 3, 0, 589841, 3, 0, 589842, 3, 0, 786432, 3, 0, 786433, 8, 0, 786434, 3, 0, 786435, 3, 0, 786436, 3, 0, 786437, 3, 0, 786438, 3, 0, 786439, 3, 0, 786440, 3, 0, 786441, 8, 0, 786442, 3, 0, 786443, 3, 0, 786444, 3, 0, 786445, 3, 0, 786446, 3, 0, 786447, 3, 0, 786448, 3, 0, 786449, 8, 0, 786450, 3, 0, 917506, 2, 0, 917507, 2, 0, 917508, 2, 0, 917509, 2, 0, 917510, 2, 0, 917511, 2, 0, 983040, 3, 0, 983041, 3, 0, 983042, 3, 0, 983044, 3, 0, 983045, 8, 0, 983046, 3, 0, 983047, 3, 0, 983048, 3, 0, 983049, 3, 0, 983050, 3, 0, 983051, 3, 0, 983052, 3, 0, 983053, 8, 0, 983054, 3, 0, 983056, 3, 0, 983057, 3, 0, 983058, 3, 0, 1048583, 2, 0, 1179648, 3, 0, 1179649, 8, 0, 1179650, 3, 0, 1179651, 3, 0, 1179652, 3, 0, 1179653, 3, 0, 1179654, 3, 0, 1179655, 3, 0, 1179656, 8, 0, 1179657, 3, 0, 1179658, 3, 0, 1179659, 8, 0, 1179660, 3, 0, 1179661, 3, 0, 1179662, 3, 0, 1179663, 3, 0, 1179664, 3, 0, 1179665, 8, 0, 1179666, 3, 0, 1376256, 3, 0, 1376257, 3, 0, 1376258, 3, 0, 1376259, 3, 0, 1376260, 3, 0, 1376261, 3, 0, 1376262, 3, 0, 1376263, 3, 0, 1376264, 3, 0, 1376265, 3, 0, 1376266, 3, 0, 1376267, 3, 0, 1376268, 3, 0, 1376269, 3, 0, 1376270, 3, 0, 1376271, 3, 0, 1376272, 3, 0, 1376273, 3, 0, 1376274, 3, 0, 1441797, 2, 0, 1507332, 2, 0, 1572865, 2, 0, 1572866, 2, 0, 1572867, 2, 0 )
 
 [node name="TileMap2" type="TileMap" parent="Nivel/Pisos"]
-tile_set = SubResource( 20 )
+tile_set = SubResource( 6 )
 cell_size = Vector2( 16, 8 )
 format = 1
 tile_data = PoolIntArray( 851967, 0, 0, 917503, 0, 0, 983039, 0, 0, 917542, 0, 0, 1048575, 0, 0, 983078, 0, 0, 1114111, 0, 0, 1048614, 0, 0, 1179647, 0, 0, 1114150, 0, 0, 1245183, 0, 0, 1179686, 0, 0, 1310719, 0, 0, 1245222, 0, 0, 1376255, 0, 0, 1310758, 0, 0, 1441791, 0, 0, 1376294, 0, 0, 1507327, 0, 0, 1441830, 0, 0, 1572863, 0, 0, 1507366, 0, 0, 1638399, 0, 0, 1572902, 0, 0, 1703935, 0, 0, 1638438, 0, 0, 1769471, 0, 0, 1703974, 0, 0, 1835007, 0, 0, 1769510, 0, 0, 1900543, 0, 0, 1835046, 0, 0, 1966079, 0, 0, 1900582, 0, 0, 2031615, 0, 0, 1966118, 0, 0, 2097151, 0, 0, 2031654, 0, 0, 2162687, 0, 0, 2097190, 0, 0, 2228223, 0, 0, 2162726, 0, 0, 2293759, 0, 0, 2228262, 0, 0, 2359295, 0, 0, 2293798, 0, 0, 2424831, 0, 0, 2359334, 0, 0, 2490367, 0, 0, 2424870, 0, 0, 2555903, 0, 0, 2490406, 0, 0, 2621439, 0, 0, 2555942, 0, 0, 2686975, 0, 0, 2621478, 0, 0, 2752511, 0, 0, 2687014, 0, 0, 2818047, 0, 0, 2752550, 0, 0, 2883583, 0, 0, 2818086, 0, 0, 2949119, 0, 0, 2883622, 0, 0, 3014655, 0, 0, 2949158, 0, 0, 3080191, 0, 0, 3014694, 0, 0, 3145727, 0, 0, 3080230, 0, 0, 3211263, 0, 0, 3145766, 0, 0, 3276799, 0, 0, 3211302, 0, 0, 3342335, 0, 0, 3276838, 0, 0, 3407871, 0, 0, 3342374, 0, 0, 3473407, 0, 0, 3407910, 0, 0, 3538943, 0, 0, 3473446, 0, 0, 3604479, 0, 0, 3538982, 0, 0, 3670015, 0, 0, 3604518, 0, 0, 3735551, 0, 0, 3670054, 0, 0, 3801087, 0, 0, 3735590, 0, 0, 3866623, 0, 0, 3801126, 0, 0, 3932159, 0, 0, 3866662, 0, 0, 3997695, 0, 0, 3932198, 0, 0, 4063231, 0, 0, 3997734, 0, 0, 4128767, 0, 0, 4063270, 0, 0, 4194303, 0, 0, 4128806, 0, 0, 4259839, 0, 0, 4194342, 0, 0, 4325375, 0, 0, 4259878, 0, 0, 4390911, 0, 0, 4325414, 0, 0, 4456447, 0, 0, 4390950, 0, 0, 4521983, 0, 0, 4456486, 0, 0, 4587519, 0, 0, 4522022, 0, 0, 4653055, 0, 0, 4587558, 0, 0, 4718591, 0, 0, 4653094, 0, 0, 4784127, 0, 0, 4718630, 0, 0, 4849663, 0, 0, 4784166, 0, 0, 4915199, 0, 0, 4849702, 0, 0, 4980735, 0, 0, 4915238, 0, 0, 5046271, 0, 0, 4980774, 0, 0, 5111807, 0, 0, 5046310, 0, 0, 5177343, 0, 0, 5111846, 0, 0, 5242879, 0, 0, 5177382, 0, 0, 5308415, 0, 0, 5242918, 0, 0, 5373951, 0, 0, 5308454, 0, 0, 5439487, 0, 0, 5373990, 0, 0, 5505023, 0, 0, 5439526, 0, 0, 5570559, 0, 0, 5505062, 0, 0, 5636095, 0, 0, 5570598, 0, 0, 5636134, 0, 0 )
@@ -280,65 +282,70 @@ script = ExtResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="esc"]
 position = Vector2( 561.431, 617.314 )
-shape = SubResource( 5 )
+shape = SubResource( 7 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="esc"]
 position = Vector2( 48.8621, 617.022 )
-shape = SubResource( 6 )
+shape = SubResource( 8 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="esc"]
 position = Vector2( 176.994, 522.198 )
-shape = SubResource( 7 )
+shape = SubResource( 9 )
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="esc"]
 position = Vector2( 432.896, 522.113 )
-shape = SubResource( 8 )
+shape = SubResource( 10 )
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="esc"]
 position = Vector2( 305.532, 427.739 )
-shape = SubResource( 9 )
+shape = SubResource( 11 )
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="esc"]
 position = Vector2( 561.559, 426.122 )
-shape = SubResource( 10 )
+shape = SubResource( 12 )
 
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="esc"]
 position = Vector2( 433.703, 326.364 )
-shape = SubResource( 11 )
+shape = SubResource( 13 )
 
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="esc"]
 position = Vector2( 49.6129, 426.785 )
-shape = SubResource( 12 )
+shape = SubResource( 14 )
 
 [node name="CollisionShape2D9" type="CollisionShape2D" parent="esc"]
 position = Vector2( 177.601, 329.845 )
-shape = SubResource( 13 )
+shape = SubResource( 15 )
 
 [node name="CollisionShape2D10" type="CollisionShape2D" parent="esc"]
 position = Vector2( 16.7256, 234.42 )
-shape = SubResource( 14 )
+shape = SubResource( 16 )
 
 [node name="CollisionShape2D11" type="CollisionShape2D" parent="esc"]
 position = Vector2( 593.1, 236.472 )
-shape = SubResource( 15 )
+shape = SubResource( 17 )
 
 [node name="CollisionShape2D12" type="CollisionShape2D" parent="esc"]
 position = Vector2( 272.559, 116.737 )
-shape = SubResource( 16 )
+shape = SubResource( 18 )
 
 [node name="CollisionShape2D13" type="CollisionShape2D" parent="esc"]
 position = Vector2( 368.234, 617.117 )
-shape = SubResource( 17 )
+shape = SubResource( 19 )
 
 [node name="CollisionShape2D14" type="CollisionShape2D" parent="esc"]
 position = Vector2( 143.934, 132.987 )
-shape = SubResource( 18 )
+shape = SubResource( 20 )
 
 [node name="CollisionShape2D15" type="CollisionShape2D" parent="esc"]
 position = Vector2( 274.273, 615.659 )
-shape = SubResource( 18 )
+shape = SubResource( 20 )
 
 [node name="DonkeyKong" parent="." instance=ExtResource( 6 )]
 position = Vector2( 39.5307, 161.378 )
+
+[node name="Barril" parent="." instance=ExtResource( 7 )]
+Martillo = ExtResource( 8 )
+
+[node name="Martillo" parent="." instance=ExtResource( 8 )]
 [connection signal="body_entered" from="esc" to="esc" method="_on_esc_body_entered"]
 [connection signal="body_exited" from="esc" to="esc" method="_on_esc_body_exited"]
