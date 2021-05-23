@@ -19,7 +19,6 @@ func _process(delta):
 	
 	if t > 30:
 		lanza_barril()
-		print(t)
 		t = 0
 		
 	
