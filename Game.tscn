@@ -352,5 +352,14 @@ position = Vector2( 39.5307, 161.378 )
 
 [node name="SonidoFondo" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 9 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 4.0
+margin_top = 1.96382
+margin_right = 593.0
+margin_bottom = 26.9638
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="body_entered" from="esc" to="esc" method="_on_esc_body_entered"]
 [connection signal="body_exited" from="esc" to="esc" method="_on_esc_body_exited"]

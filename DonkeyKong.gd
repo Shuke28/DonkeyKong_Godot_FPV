@@ -18,8 +18,10 @@ func _process(delta):
 	t += 1
 	
 	if t > 30:
-		lanza_barril()
-		t = 0
+		if VariablesGlobales.barriles < 25:
+			lanza_barril()
+			t = 0
+			VariablesGlobales.barriles += 1
 		
 	
 	$Sprite.flip_h = false
