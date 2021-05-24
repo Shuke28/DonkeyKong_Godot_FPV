@@ -32,4 +32,3 @@ func _physics_process(delta):
 		queue_free()
 		VariablesGlobales.b = 0
 	var collision = move_and_collide(pos)
-

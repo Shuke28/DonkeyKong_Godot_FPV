@@ -12,4 +12,5 @@ func _ready():
 
 
 func _on_Button_pressed():
+	$Intro.play()
 	get_tree().change_scene("res://Game.tscn")

@@ -48,15 +48,18 @@ func _physics_process(_delta):
 		VariablesGlobales.p.x = 10
 		$sprite.flip_h = false
 		$AnimationPlayer.play("Walk")
+		#$SonidoCaminar.play()
 		motion.x = min(motion.x + ACELERATION, MAX_SPEED)
 		
 	elif Input.is_action_pressed("ui_left"):
 		VariablesGlobales.p.x = -10
 		$sprite.flip_h = true
 		$AnimationPlayer.play("Walk")
+		#$SonidoCaminar.play()
 		motion.x = min(motion.x + ACELERATION, -MAX_SPEED)
 	else:
 		$AnimationPlayer.play("Idle")
+		#$SonidoCaminar.stop()
 		motion.x = 0
 		friction = true
 	
@@ -68,9 +71,11 @@ func _physics_process(_delta):
 	if is_on_floor():
 		if Input.is_action_just_pressed("ui_accept"):
 			motion.y = JUMP_H
+			$SonidoBrinca.play()
 		if friction == true:
 			motion.x = lerp(motion.x, 0, 0.5)		
 	else:
+		$SonidoBrinca.stop()
 		if friction == true:
 			motion.x = lerp(motion.x, 0, 0.01)
 	

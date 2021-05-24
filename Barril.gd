@@ -16,4 +16,5 @@ func _process(delta):
 func _integrate_forces(state):
 	for i in range(state.get_contact_count()):
 		if(state.get_contact_collider_object(i).is_in_group("Martillos")):
+			$HammerSmash.play()
 			queue_free()
