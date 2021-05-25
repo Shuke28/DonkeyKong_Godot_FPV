@@ -1,9 +1,11 @@
 extends RigidBody2D
 
 export (PackedScene) var Martillo
-
+signal golpe
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	#Desactiva el CollisionShape2d, estado predeterminado
+	$CollisionShape2D.disabled = false
 	apply_impulse(Vector2(200, 0), Vector2(200, 0))
 
 
@@ -19,4 +21,8 @@ func _integrate_forces(state):
 			VariablesGlobales.b_dest += 1
 			$HammerSmash.play()
 			queue_free()
-			
+		if(state.get_contact_collider_object(i).is_in_group("Player")):
+			#print("GameOver")
+			emit_signal("golpe")
+			#Activa el CollisionShape2d
+			$CollisionShape2D.disabled = true

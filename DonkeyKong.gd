@@ -17,12 +17,13 @@ func lanza_barril():
 func _process(delta):
 	t += 1
 	
-	if t > 30:
+	if t > 100:
 		if VariablesGlobales.barriles < 25:
 			lanza_barril()
 			t = 0
 			VariablesGlobales.barriles += 1
-		
-	
-	$Sprite.flip_h = false
-	get_node("AnimationPlayer").play("recogerAventar")
+	if VariablesGlobales.barriles == 25:
+		get_node("AnimationPlayer").play("golpe")
+	else:
+		$Sprite.flip_h = false
+		get_node("AnimationPlayer").play("recogerAventar")

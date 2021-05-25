@@ -63,7 +63,9 @@ loop = true
 [sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 4.2917, 9.33511 )
 
-[node name="Mario" type="KinematicBody2D"]
+[node name="Mario" type="KinematicBody2D" groups=[
+"Player",
+]]
 position = Vector2( -0.0415459, -0.0833759 )
 scale = Vector2( 1.5, 1.5 )
 script = ExtResource( 4 )
