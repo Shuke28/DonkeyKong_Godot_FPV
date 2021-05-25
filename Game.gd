@@ -5,3 +5,7 @@ func _ready():
 	
 func _process(delta):
 	$Label.text = "Barriles creados: " + str(VariablesGlobales.barriles) + "	Barriles destruidos: " + str(VariablesGlobales.b_dest)
+
+
+func _on_Barril_golpe():
+	print("GameOver")

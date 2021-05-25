@@ -75,7 +75,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id=6]
 resource_name = "recogerAventar"
-length = 1.2
+length = 1.7
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:region_rect")
@@ -84,7 +84,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.4, 0.8 ),
+"times": PoolRealArray( 0, 0.8, 1.6 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 2,
 "values": [ Rect2( 5, 150, 49, 35 ), Rect2( 153, 150, 49, 35 ), Rect2( 252, 150, 49, 35 ) ]
@@ -99,7 +99,7 @@ position = Vector2( 2.01382, -2.68715 )
 scale = Vector2( 1.6, 1.9 )
 texture = ExtResource( 1 )
 region_enabled = true
-region_rect = Rect2( 252, 150, 49, 35 )
+region_rect = Rect2( 57, 150, 49, 35 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 1.96082, -1.01255 )

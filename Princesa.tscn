@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/DonkeyKongSheet1.png" type="Texture" id=1]
+[ext_resource path="res://Princesa.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 7.75, 11.25 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "movimiento"
+length = 1.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 2,
+"values": [ Rect2( 156.631, 124.615, 18.4414, 24.2812 ), Rect2( 182, 125, 18, 23 ), Rect2( 132, 125, 18, 24 ), Rect2( 106, 125, 17, 24 ) ]
+}
+
+[node name="Princesa" type="Area2D"]
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 182, 125, 18, 23 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, -0.25 )
+shape = SubResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/movimiento = SubResource( 2 )
