@@ -283,7 +283,7 @@ position = Vector2( 108.32, 78.8425 )
 scale = Vector2( 1.5, 1.5 )
 
 [node name="Mario" parent="." instance=ExtResource( 1 )]
-position = Vector2( 495.681, 358.273 )
+position = Vector2( 94, 643 )
 
 [node name="esc" type="Area2D" parent="."]
 script = ExtResource( 4 )

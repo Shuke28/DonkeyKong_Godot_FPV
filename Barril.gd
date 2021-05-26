@@ -21,8 +21,12 @@ func _integrate_forces(state):
 			VariablesGlobales.b_dest += 1
 			$HammerSmash.play()
 			queue_free()
-		if(state.get_contact_collider_object(i).is_in_group("Player")):
-			#print("GameOver")
+			
+		elif (state.get_contact_collider_object(i).is_in_group("Player")):
+			print("GameOver")
+			VariablesGlobales.vida_mario = false
+			queue_free()
+			
 			emit_signal("golpe")
 			#Activa el CollisionShape2d
 			$CollisionShape2D.disabled = true

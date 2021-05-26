@@ -15,6 +15,19 @@ var on_ladder = false
 var motion = Vector2()
 
 func _physics_process(_delta):
+	if VariablesGlobales.vida_mario == false:
+		VariablesGlobales.vidas -= 1
+		VariablesGlobales.vida_mario = true
+		position = Vector2(94, 643)
+		
+	if VariablesGlobales.vidas == 0:
+		VariablesGlobales.vidas = 3
+		VariablesGlobales.vida_mario == true
+		VariablesGlobales.barriles = 0
+		VariablesGlobales.b_dest = -1
+		position = Vector2(94, 643)
+		get_tree().change_scene("res://Node.tscn")
+		
 	motion.y += gravity
 	var friction = false
 	
