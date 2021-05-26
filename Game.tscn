@@ -366,6 +366,37 @@ margin_bottom = 26.9638
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 412.032
+margin_top = 3.4364
+margin_right = 598.032
+margin_bottom = 23.4364
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 232.07
+margin_top = 2.0
+margin_right = 424.07
+margin_bottom = 32.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label4" type="Label" parent="."]
+margin_left = 456.576
+margin_top = 32.2906
+margin_right = 648.576
+margin_bottom = 62.2906
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="."]
+[connection signal="body_entered" from="Princesa" to="Princesa" method="_on_Princesa_body_entered"]
 [connection signal="body_entered" from="esc" to="esc" method="_on_esc_body_entered"]
 [connection signal="body_exited" from="esc" to="esc" method="_on_esc_body_exited"]
 [connection signal="golpe" from="Barril" to="." method="_on_Barril_golpe"]
+[connection signal="timeout" from="Timer" to="." method="Timer_out"]

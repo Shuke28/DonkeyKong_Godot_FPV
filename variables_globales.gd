@@ -9,6 +9,9 @@ var barriles #barriles creados
 var b_dest #barriles destruidos
 var vida_mario
 var vidas
+var tiempo_juego = 180
+var gano = 0
+var g_b = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

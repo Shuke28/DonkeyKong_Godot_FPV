@@ -14,19 +14,31 @@ var on_ladder = false
 
 var motion = Vector2()
 
+func reinicia():
+	VariablesGlobales.vidas = 3
+	VariablesGlobales.vida_mario == true
+	VariablesGlobales.barriles = 0
+	VariablesGlobales.tiempo_juego = 180
+	VariablesGlobales.b_dest = -1
+	position = Vector2(94, 643)
+	get_tree().change_scene("res://Node.tscn")
+
 func _physics_process(_delta):
+	if VariablesGlobales.g_b == true:
+		reinicia()
+		VariablesGlobales.g_b = false
+		get_tree().change_scene("res://Node.tscn")
+	
 	if VariablesGlobales.vida_mario == false:
 		VariablesGlobales.vidas -= 1
 		VariablesGlobales.vida_mario = true
 		position = Vector2(94, 643)
 		
 	if VariablesGlobales.vidas == 0:
-		VariablesGlobales.vidas = 3
-		VariablesGlobales.vida_mario == true
-		VariablesGlobales.barriles = 0
-		VariablesGlobales.b_dest = -1
-		position = Vector2(94, 643)
-		get_tree().change_scene("res://Node.tscn")
+		reinicia()
+		
+	if VariablesGlobales.tiempo_juego == 0:
+		reinicia()
 		
 	motion.y += gravity
 	var friction = false
@@ -100,4 +112,3 @@ func shoot():
 	var bullet = proyectil.instance()
 	bullet.position = get_global_position() + VariablesGlobales.p
 	get_parent().add_child(bullet)
-

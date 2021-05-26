@@ -26,6 +26,7 @@ func _integrate_forces(state):
 			print("GameOver")
 			VariablesGlobales.vida_mario = false
 			queue_free()
+			VariablesGlobales.barriles -= 1
 			
 			emit_signal("golpe")
 			#Activa el CollisionShape2d
