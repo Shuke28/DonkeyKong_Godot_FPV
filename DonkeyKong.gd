@@ -4,6 +4,9 @@ var t
 
 func _ready():
 	t = 0
+	if VariablesGlobales.donkey_die == true:
+		print("murio mono")
+		get_node("AnimationPlayer").play("morirse")
 	
 	
 	
@@ -16,9 +19,8 @@ func lanza_barril():
 
 func _process(delta):
 	t += 1
-	
 	if t > 100:
-		if VariablesGlobales.barriles < 3:
+		if VariablesGlobales.barriles < 25:
 			lanza_barril()
 			t = 0
 			VariablesGlobales.barriles += 1

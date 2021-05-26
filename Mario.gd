@@ -56,16 +56,12 @@ func _physics_process(_delta):
 			
 		elif Input.is_action_pressed("ui_down"):
 			gravity = 0
-			#sprite.visible = false
-			#sprite2.visible = true
 			$AnimationPlayer.play("Sb_Esc")
 			motion.y = min(motion.y + ACELERATION, MAX_SPEED)
 		else:
 			motion.y = 0
 		
 	else:
-		#sprite.visible = true
-		#sprite2.visible = false
 		gravity =  20
 	
 	
