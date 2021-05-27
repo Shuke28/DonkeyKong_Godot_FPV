@@ -8,7 +8,7 @@
 
 [sub_resource type="DynamicFont" id=1]
 size = 27
-outline_color = Color( 0.94902, 0.956863, 0.0313726, 1 )
+outline_color = Color( 0.984314, 0.94902, 0.117647, 1 )
 font_data = ExtResource( 5 )
 
 [node name="Node" type="Node"]
@@ -21,8 +21,9 @@ scale = Vector2( 1.32267, 1.64613 )
 texture = ExtResource( 2 )
 
 [node name="Button" type="Button" parent="."]
-modulate = Color( 0.443137, 0.384314, 0.0431373, 1 )
-self_modulate = Color( 0.933333, 1, 0.133333, 1 )
+modulate = Color( 0.0352941, 0.321569, 0.94902, 1 )
+self_modulate = Color( 0.905882, 0.972549, 0.133333, 1 )
+light_mask = -2147483613
 margin_left = 213.356
 margin_top = 421.358
 margin_right = 382.356
@@ -35,5 +36,4 @@ __meta__ = {
 
 [node name="Intro" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
-autoplay = true
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

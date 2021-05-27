@@ -349,7 +349,7 @@ position = Vector2( 274.273, 615.659 )
 shape = SubResource( 20 )
 
 [node name="DonkeyKong" parent="." instance=ExtResource( 6 )]
-position = Vector2( 39.7956, 163.232 )
+position = Vector2( 39.5307, 161.378 )
 
 [node name="Barril" parent="." instance=ExtResource( 7 )]
 
