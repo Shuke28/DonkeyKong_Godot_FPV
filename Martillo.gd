@@ -2,12 +2,12 @@ extends KinematicBody2D
 
 #	Se inicializan las variables para la trayectoria
 #	de la bala
-var velocidad = 5
-var pos = Vector2()
-var ang = 60
-var g = 9.81
-var t = 0
-const up_direction = Vector2(0, -1)
+var velocidad = 5 #Velocidad del martillo
+var pos = Vector2() #Vector para el movimiento del martillo
+var ang = 60 #Ángulo de lanzamiento
+var g = 9.81 #Gravedad del martillo
+var t = 0 #Tiempo para controlar dentro del código
+const up_direction = Vector2(0, -1) #Dirección hacia arriba afectando en -y
 
 
 func _ready():
