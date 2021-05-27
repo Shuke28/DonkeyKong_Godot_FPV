@@ -1,13 +1,102 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=14 format=2]
 
-[ext_resource path="res://Escena_pruebas.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Mario.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/1.PNG" type="Texture" id=2]
 [ext_resource path="res://Node.gd" type="Script" id=3]
 [ext_resource path="res://sounds/intro1.wav" type="AudioStream" id=4]
+[ext_resource path="res://assets/Retro Gaming.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://DonkeyKong.tscn" type="PackedScene" id=6]
+[ext_resource path="res://assets/piso.png" type="Texture" id=7]
 
-[node name="Node" type="Node"]
+[sub_resource type="ConcavePolygonShape2D" id=1]
+segments = PoolVector2Array( 16, 6.74959, 0, 6.74959, 0, 6.74959, 0, 0, 0, 0, 16, 0.0516357, 16, 0.0516357, 16, 6.74959 )
+
+[sub_resource type="ConvexPolygonShape2D" id=2]
+points = PoolVector2Array( 0, 0, 16, 0, 16, 9, 0, 9 )
+
+[sub_resource type="ConvexPolygonShape2D" id=3]
+points = PoolVector2Array( 16, 8, 0, 8, 0, 0.386536, 16, 0.386536 )
+
+[sub_resource type="TileSet" id=4]
+0/name = "piso.png 0"
+0/texture = ExtResource( 7 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 16, 9 )
+0/tile_mode = 1
+0/autotile/bitmask_mode = 0
+0/autotile/bitmask_flags = [  ]
+0/autotile/icon_coordinate = Vector2( 0, 0 )
+0/autotile/tile_size = Vector2( 16, 16 )
+0/autotile/spacing = 0
+0/autotile/occluder_map = [  ]
+0/autotile/navpoly_map = [  ]
+0/autotile/priority_map = [  ]
+0/autotile/z_index_map = [  ]
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 1 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 1 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 2 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+1/name = "piso.png 1"
+1/texture = ExtResource( 7 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 1, 16, 8 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape = SubResource( 3 )
+1/shape_one_way = false
+1/shape_one_way_margin = 1.0
+1/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 3 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+1/z_index = 0
+
+[sub_resource type="PackedScene" id=5]
+_bundled = {
+"conn_count": 0,
+"conns": PoolIntArray(  ),
+"editable_instances": [  ],
+"names": PoolStringArray( "Node2D", "Node2D", "Mario", "position", "TileMap", "TileMap", "tile_set", "cell_size", "format", "tile_data", "TileMap2", "TileMap", "format", "DonkeyKong", "position" ),
+"node_count": 5,
+"node_paths": [ NodePath("."), NodePath("."), NodePath("."), NodePath(".") ],
+"nodes": PoolIntArray( -1, -1, 1, 0, -1, 0, 0, 1073741824, 0, 2147483647, 2, 0, 1, 3, 1, 0, 1073741825, 0, 5, 4, -1, 4, 6, 2, 7, 3, 8, 4, 9, 5, 0, 1073741826, 0, 11, 10, -1, 1, 12, 6, 0, 1073741827, 0, 2147483647, 13, 7, 1, 14, 8, 0 ),
+"variants": [ ExtResource( 1 ), Vector2( 125.385, 372.445 ), SubResource( 4 ), Vector2( 16, 8 ), 1, PoolIntArray( 3407907, 1, 0, 3407908, 1, 0, 3473443, 1, 0, 3473444, 1, 0, 3538950, 1, 0, 3538951, 1, 0, 3538952, 1, 0, 3538953, 1, 0, 3538954, 1, 0, 3538955, 1, 0, 3538956, 1, 0, 3538957, 1, 0, 3538958, 1, 0, 3538959, 1, 0, 3538960, 1, 0, 3538979, 1, 0, 3538980, 1, 0, 3604515, 1, 0, 3604516, 1, 0, 3670051, 1, 0, 3670052, 1, 0, 3735587, 1, 0, 3735588, 1, 0, 3801123, 1, 0, 3801124, 1, 0, 3866659, 1, 0, 3866660, 1, 0, 3932195, 1, 0, 3932196, 1, 0, 3997731, 1, 0, 3997732, 1, 0, 4063232, 1, 0, 4063233, 1, 0, 4063234, 1, 0, 4063235, 1, 0, 4063236, 1, 0, 4063237, 1, 0, 4063238, 1, 0, 4063239, 1, 0, 4063240, 1, 0, 4063241, 1, 0, 4063242, 1, 0, 4063243, 1, 0, 4063244, 1, 0, 4063245, 1, 0, 4063246, 1, 0, 4063247, 1, 0, 4063248, 1, 0, 4063249, 1, 0, 4063250, 1, 0, 4063251, 1, 0, 4063252, 1, 0, 4063253, 1, 0, 4063254, 1, 0, 4063255, 1, 0, 4063256, 1, 0, 4063257, 1, 0, 4063258, 1, 0, 4063259, 1, 0, 4063260, 1, 0, 4063261, 1, 0, 4063262, 1, 0, 4063263, 1, 0, 4063264, 1, 0, 4063265, 1, 0, 4063266, 1, 0, 4063267, 1, 0, 4063268, 1, 0, 4128774, 1, 0, 4128775, 1, 0, 4128787, 1, 0, 4128788, 1, 0, 4128789, 1, 0, 4128790, 1, 0, 4128791, 1, 0, 4128792, 1, 0, 4128793, 1, 0, 4128794, 1, 0, 4128795, 1, 0, 4128796, 1, 0, 4128797, 1, 0, 4128798, 1, 0, 4194311, 1, 0, 4194312, 1, 0, 4194313, 1, 0, 4194321, 1, 0, 4194322, 1, 0, 4259850, 1, 0, 4259851, 1, 0, 4259852, 1, 0, 4259853, 1, 0, 4259854, 1, 0, 4259855, 1, 0, 4259856, 1, 0, 4259857, 1, 0 ), 1, ExtResource( 6 ), Vector2( 58.7339, 466.696 ) ],
+"version": 2
+}
+
+[sub_resource type="DynamicFont" id=6]
+size = 27
+outline_color = Color( 0.984314, 0.94902, 0.117647, 1 )
+font_data = ExtResource( 5 )
+
+[node name="Principal" type="Node"]
 script = ExtResource( 3 )
-sce_game = ExtResource( 1 )
+sce_game = SubResource( 5 )
 
 [node name="1" type="Sprite" parent="."]
 position = Vector2( 299.814, 350.768 )
@@ -15,10 +104,14 @@ scale = Vector2( 1.32267, 1.64613 )
 texture = ExtResource( 2 )
 
 [node name="Button" type="Button" parent="."]
+modulate = Color( 0.0352941, 0.321569, 0.94902, 1 )
+self_modulate = Color( 0.905882, 0.972549, 0.133333, 1 )
+light_mask = -2147483613
 margin_left = 213.356
 margin_top = 421.358
 margin_right = 382.356
 margin_bottom = 462.358
+custom_fonts/font = SubResource( 6 )
 text = "Jugar"
 __meta__ = {
 "_edit_use_anchors_": false

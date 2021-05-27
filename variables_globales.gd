@@ -1,17 +1,14 @@
 extends Node
 
-
-# Declare member variables here. Examples:
-# var a = 2
-var b
+var b #Marcador que nos dice cuando hay un martillo en la escena
 var p = Vector2(0, 0)
 var barriles #barriles creados
 var b_dest #barriles destruidos
-var vida_mario
-var vidas
-var tiempo_juego = 180
-var gano = 0
-var g_b = false
+var vida_mario #Contabilidad de las vidas de mario
+var vidas #Marcadores que nos dirá si Mario murió
+var tiempo_juego = 180 #Tiempo que tiene mario para ganar la partida
+var gano = 0 #Contador de juegos ganados en una sesión 
+var g_b = false #Marcador para avisarnos si Mario ganó una partida
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

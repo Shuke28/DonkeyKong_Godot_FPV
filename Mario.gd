@@ -6,13 +6,8 @@ const JUMP_H = -280
 const up_direction = Vector2(0, -1)
 var gravity = 20
 var t = 0
-
-#onready var sprite = $M_walk
-#nready var sprite2 = $M_up
-var on_ladder = false
-#onready var animationPlayer = $AnimationPlayer
-
-var motion = Vector2()
+var on_ladder = false #Se encuentra en escalera o no
+var motion = Vector2() #Vector de posición
 
 func reinicia():
 	VariablesGlobales.vidas = 3
@@ -73,18 +68,15 @@ func _physics_process(_delta):
 		VariablesGlobales.p.x = 10
 		$sprite.flip_h = false
 		$AnimationPlayer.play("Walk")
-		#$SonidoCaminar.play()
 		motion.x = min(motion.x + ACELERATION, MAX_SPEED)
 		
 	elif Input.is_action_pressed("ui_left"):
 		VariablesGlobales.p.x = -10
 		$sprite.flip_h = true
 		$AnimationPlayer.play("Walk")
-		#$SonidoCaminar.play()
 		motion.x = min(motion.x + ACELERATION, -MAX_SPEED)
 	else:
 		$AnimationPlayer.play("Idle")
-		#$SonidoCaminar.stop()
 		motion.x = 0
 		friction = true
 	
