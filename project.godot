@@ -22,7 +22,7 @@ config/icon="res://icon.png"
 
 [autoload]
 
-VariablesGlobales="*res://variables_globales.gd"
+VariablesGlobales="*res://codigo/variables_globales.gd"
 
 [display]
 

@@ -4,18 +4,11 @@ const ACELERATION = 50
 const MAX_SPEED = 100
 const JUMP_H = -280
 const up_direction = Vector2(0, -1)
-<<<<<<< HEAD
-var gravity = 20
-var t = 0
-var on_ladder = false #Se encuentra en escalera o no
-var motion = Vector2() #Vector de posición
-=======
 var gravity = 20 #Gravedad por default
 var t = 0 #Variabla para controlar tiempo dentro de ciclos
 
 var on_ladder = false
 var motion = Vector2()
->>>>>>> master
 
 #Se reinician todos los valores cuando Mario pierde las tres vidas
 #y cambia de escena a la de inicio
@@ -71,28 +64,20 @@ func _physics_process(_delta):
 	if Input.is_action_pressed("ui_right"):
 		VariablesGlobales.p.x = 10
 		$sprite.flip_h = false
-<<<<<<< HEAD
-		$AnimationPlayer.play("Walk")
-=======
 		$AnimationPlayer.play("Walk")#Se reproduce la animación de caminar
 		#$SonidoCaminar.play()
->>>>>>> master
 		motion.x = min(motion.x + ACELERATION, MAX_SPEED)
 	#Si se presiona la tecla izquierda Mario avanza por la dirección -x cada 10 pixeles
 	elif Input.is_action_pressed("ui_left"):
 		VariablesGlobales.p.x = -10
-<<<<<<< HEAD
-		$sprite.flip_h = true
-		$AnimationPlayer.play("Walk")
-=======
 		$sprite.flip_h = true #Se invierte el sprite horizontalmete
 		$AnimationPlayer.play("Walk") #Se reproduce la animación de caminar
 		#$SonidoCaminar.play()
->>>>>>> master
 		motion.x = min(motion.x + ACELERATION, -MAX_SPEED)
 	#Si no se presiona alguna tecla permanece estático y sin movimiento
 	else:
 		$AnimationPlayer.play("Idle")
+		#$SonidoCaminar.stop()
 		motion.x = 0
 		friction = true
 	#Si la tecla d se presiona, se lanza un martillo

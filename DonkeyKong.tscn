@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://assets/DonkeyKongSheet1.png" type="Texture" id=1]
-[ext_resource path="res://DonkeyKong.gd" type="Script" id=2]
+[ext_resource path="res://codigo/DonkeyKong.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 33.0922, 30.8445 )
