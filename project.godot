@@ -18,11 +18,11 @@ _global_script_class_icons={
 config/name="Godot-template"
 config/description="Template from https://github.com/DeybisMelendez/godot-template"
 run/main_scene="res://Node.tscn"
-config/icon="res://documentacion/figuras/icon.png"
+config/icon="res://icon.png"
 
 [autoload]
 
-VariablesGlobales="*res://codigo/variables_globales.gd"
+VariablesGlobales="*res://variables_globales.gd"
 
 [display]
 
