@@ -25,6 +25,7 @@ region_enabled = true
 region_rect = Rect2( 65.1945, 257.447, 13.3469, 11.2935 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 shape = SubResource( 1 )
 
 [node name="HammerSmash" type="AudioStreamPlayer" parent="."]
