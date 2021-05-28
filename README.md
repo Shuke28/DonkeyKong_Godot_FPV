@@ -21,13 +21,12 @@ gusto.
 12. Princesa.tscn: escena donde se encuentra la princesa.
 13. project.godot: archivo que controla el proyecto en Godot.
 
-# Versión actual
+### Versión actual
 
 1.0.3
 
-# Créditos
+### Créditos
 Creado por:
 
-Ariana
-
-Darío
+1. Ariana
+2. Darío
